@@ -1,0 +1,40 @@
+name: Continuos Delivery
+
+on:
+  push:
+    branches: [main]
+    paths: ["**.typ"]
+
+  pull_request:
+    branches: [main]
+    paths: ["**.typ"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Set up Typst
+        uses: yusancky/setup-typst@v2
+        id: setup-typst
+        with:
+          version: "latest"
+
+      - name: Set up Just
+        uses: extractions/setup-just@v1
+        with:
+          just-version: "1.14"
+
+      - name: Build project
+        run: |
+          just cv
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: CV
+          path: ./*.pdf
+          if-no-files-found: error
