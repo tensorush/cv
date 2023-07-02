@@ -53,7 +53,7 @@ jobs:
       - name: Upload artifact for GitHub Pages
         uses: actions/upload-pages-artifact@v1
         with:
-          path: "./cv.pdf"
+          path: "./out/"
 
       - name: Deploy to GitHub Pages
         id: deployment
