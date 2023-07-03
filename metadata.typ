@@ -1,16 +1,26 @@
 /* Personal Information */
 
-#let firstName = "Jora"
-#let lastName = "Troosh"
+#let firstName = (
+    "en": "Jora",
+    "ru": "Жора",
+)
+
+#let lastName = (
+    "en": "Troosh",
+    "ru": "Труш",
+)
+
 #let personalInfo = (
   github: "tensorush",
   linkedin: "tensorush",
   email: "tensorush@gmail.com",
 )
 
-#let headerSummary = [
-  Open to a Go Software Engineering position working on developer systems and tools.
-]
+// Add your own languages with the keys matching the languages variable from cv.typ
+#let headerSummary = (
+  "en": "Open to Lua/Go/Zig SWE positions, especially working on developer systems and tools.",
+  "ru": "Готов к разработке на Lua/Go/Zig, особенно над инструментами для разработчиков.",
+)
 
 /* Layout Setting */
 
@@ -20,17 +30,8 @@
 // Leave blank if profile photo is not needed
 #let profilePhoto = "./assets/photo.png"
 
-// INFO: value must matches folder suffix; i.e "zh" -> "./sections_zh"
-#let varLanguage = "en"
-
 // Decide if you want to put your company in bold or your position in bold
 #let varEntrySocietyFirst = false
 
 // Decide if you want to display organisation logo or not
 #let varDisplayLogo = true
-
-// Add your own languages with the keys matching the varLanguage variable
-#let cvFooterInternational = (
-  "en": "Curriculum vitae",
-  "ru": "Резюме"
-)

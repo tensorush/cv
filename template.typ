@@ -4,7 +4,7 @@
 
 #let layout(doc) = {
   set text(
-    font: ("Roboto", "Font Awesome 6 Brands", "Font Awesome 6 Free"),
+    font: ("Roboto", "Font Awesome 6 Brands", "Font Awesome 6 Free", "Noto Emoji"),
     weight: "regular",
     size: 9pt,
   )
@@ -35,18 +35,8 @@
   #hSpc() · #hSpc()
 ]
 
-#let autoImport(file) = {
-  include {"sections_" + varLanguage + "/" + file + ".typ"}
-}
-
-#let languageSwitch(dict) = {
-  for (k, v) in dict {
-    if k == varLanguage {
-      return v
-      break
-    }
-  }
-  panic("i18n: language value not matching any key in the array")
+#let autoImport(file, language) = {
+  include {"sections_" + language + "/" + file + ".typ"}
 }
 
 /* Styles */
@@ -201,15 +191,15 @@
   }
 }
 
-#let makeHeaderNameSection() = table(
+#let makeHeaderNameSection(language) = table(
   columns: 1fr,
   inset: 0pt,
   stroke: none,
   row-gutter: 6mm,
-  [#headerFirstNameStyle(firstName) #h(5pt) #headerLastNameStyle(lastName)],
+  [#headerFirstNameStyle(firstName.at(language)) #h(5pt) #headerLastNameStyle(lastName.at(language))],
   [#headerInfoStyle(makeHeaderInfo())],
-  if headerSummary != "" [
-    #headerSummaryStyle(headerSummary)
+  if headerSummary.at(language) != "" [
+    #headerSummaryStyle(headerSummary.at(language))
   ]
 )
 
@@ -221,7 +211,7 @@
   }
 }
 
-#let cvHeader(align: left, hasPhoto: true ) = {
+#let cvHeader(align: left, hasPhoto: true, language) = {
   let makeHeader(leftComp, rightComp, columns, align) = table(
     columns: columns,
     inset: 0pt,
@@ -232,9 +222,9 @@
     {rightComp}
   )
   if hasPhoto {
-    makeHeader(makeHeaderNameSection(), makeHeaderPhotoSection(), (auto, 20%), align)
+    makeHeader(makeHeaderNameSection(language), makeHeaderPhotoSection(), (auto, 20%), align)
   } else {
-    makeHeader(makeHeaderNameSection(), makeHeaderPhotoSection(), (auto, 0%), align)
+    makeHeader(makeHeaderNameSection(language), makeHeaderPhotoSection(), (auto, 0%), align)
   }
 }
 
@@ -317,18 +307,5 @@
     stroke: none,
     skillTypeStyle(type),
     skillInfoStyle(info),
-  )
-}
-
-#let cvFooter() = {
-  place(
-    bottom,
-    table(
-      columns: (1fr, auto),
-      inset: 0pt,
-      stroke: none,
-      footerStyle([#firstName #lastName]),
-      footerStyle(languageSwitch(cvFooterInternational)),
-    )
   )
 }
