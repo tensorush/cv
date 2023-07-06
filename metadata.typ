@@ -18,8 +18,8 @@
 
 // Add your own languages with the keys matching the languages variable from cv.typ
 #let headerSummary = (
-  "en": "Open to Lua/Go/Zig SWE positions, especially working on developer systems and tools.",
-  "ru": "Готов к разработке на Lua/Go/Zig, особенно над инструментами для разработчиков.",
+  "en": "Open to Go/Lua SWE positions, especially working on developer systems and tools.",
+  "ru": "Готов к разработке на Go/Lua, особенно над инструментами для разработчиков.",
 )
 
 /* Layout Setting */

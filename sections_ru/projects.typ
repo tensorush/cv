@@ -14,7 +14,7 @@
 
 #cvProject(
   title: [#link("https://github.com/tensorush/zig-uuid")[\u{f092} #hSpc() #underline("uuid")]],
-  description: [#emoji.lizard #emoji.id Zig-реализация всех версий универсального уникального идентификатора (UUID).]
+  description: [#emoji.lizard #emoji.id Zig-реализация всех версий всемирно уникального идентификатора (UUID).]
 )
 
 #cvProject(
