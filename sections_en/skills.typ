@@ -4,7 +4,7 @@
 
 #cvSkill(
   type: [Stack],
-  info: [Go #hBar() Lua #hBar() PostgreSQL #hBar() Docker #hBar() Linux #hBar() CI/CD]
+  info: [Go #hBar() PostgreSQL #hBar() Docker #hBar() Linux #hBar() CI/CD]
 )
 
 #cvSkill(

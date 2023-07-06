@@ -2,7 +2,7 @@
 
 #let firstName = (
     "en": "Jora",
-    "ru": "Жора",
+    "ru": "Георгий (Жора)",
 )
 
 #let lastName = (
@@ -12,6 +12,7 @@
 
 #let personalInfo = (
   github: "tensorush",
+  telegram: "tensorush",
   linkedin: "tensorush",
   email: "tensorush@gmail.com",
 )

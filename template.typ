@@ -164,6 +164,7 @@
     phone: [\u{f2c1}],
     email: [\u{f0e0}],
     linkedin: [\u{f08c}],
+    telegram: [\u{f2c6}],
     homepage: [\u{1f5d6}],
     github: [\u{f092}],
     extraInfo: "",
@@ -177,6 +178,8 @@
       personalInfoIcons.at(k) + h(5pt)
       if k == "email" {
         link("mailto:" + v)[#v]
+      } else if k == "telegram" {
+        link("https://t.me/" + v)[#v]
       } else if k == "linkedin" {
         link("https://www.linkedin.com/in/" + v)[#v]
       } else if k == "github" {
