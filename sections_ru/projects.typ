@@ -9,7 +9,7 @@
 
 #cvProject(
   title: [#link("https://github.com/tensorush/zig-msgpuck")[\u{f092} #hSpc() msgpuck]],
-  description: [#emoji.lizard #emoji.mail Zig-порт формата бинарной сериализации msgpuck, реализованный командой Tarantool.]
+  description: [#emoji.lizard #emoji.mail Zig-порт формата бинарной сериализации MessagePack, реализованный командой Tarantool.]
 )
 
 #cvProject(
