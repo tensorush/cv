@@ -4,7 +4,7 @@
 
 #cvSkill(
   type: [Стек],
-  info: [Go #hBar() Zig #hBar() PostgreSQL #hBar() Docker #hBar() Linux #hBar() GitHub]
+  info: [#go #hSpc() Go #hBar() #lua #hSpc() Lua #hBar() #zig #hSpc() Zig #hBar() #dbms #hSpc() DBMS #hBar() #docker #hSpc() Docker #hBar() #linux #hSpc() Linux #hBar() #gha #hSpc() GitHub]
 )
 
 #cvSkill(

@@ -1,10 +1,11 @@
 #import "metadata.typ": *
+#import "@preview/fontawesome:0.1.0": *
 
 /* Layout */
 
 #let layout(doc) = {
   set text(
-    font: ("Roboto", "Font Awesome 6 Brands", "Font Awesome 6 Free", "Noto Emoji"),
+    font: ("Roboto", "Noto Emoji"),
     weight: "regular",
     size: 9pt,
   )
@@ -157,16 +158,27 @@
   smallcaps(str)
 )}
 
+/* Font Awesome Icons */
+
+#let lua = fa-moon()
+#let go = fa-golang()
+#let zig = fa-bolt()
+#let dbms = fa-database()
+#let docker = fa-docker()
+#let linux = fa-linux()
+#let gh = fa-github()
+#let gha = fa-github-alt()
+
 /* Functions */
 
 #let makeHeaderInfo() = {
   let personalInfoIcons = (
-    phone: [\u{f2c1}],
-    email: [\u{f0e0}],
-    linkedin: [\u{f08c}],
-    telegram: [\u{f2c6}],
-    homepage: [\u{1f5d6}],
-    github: [\u{f092}],
+    phone: fa-phone(),
+    email: fa-envelope(),
+    telegram: fa-telegram(),
+    linkedin: fa-linkedin(),
+    homepage: fa-pager(),
+    github: gh,
     extraInfo: "",
   )
   let n = 1
