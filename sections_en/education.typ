@@ -8,9 +8,7 @@
   date: [October 2022 - March 2023],
   location: [Munich, Germany #hDot() On-site],
   logo: "./assets/logos/tum.png",
-  description: list(
-    [Courses: #hSpc() Software Engineering Patterns #hBar() Distributed Systems #hBar() Virtualization Methods]
-  )
+  description: [Courses: #hSpc() Software Engineering Patterns #hBar() Distributed Systems #hBar() Virtualization Methods]
 )
 
 #cvEntry(
@@ -19,9 +17,7 @@
   date: [September 2021 - June 2023],
   location: [Moscow, Russia #hDot() Hybrid],
   logo: "./assets/logos/mai.png",
-  description: list(
-    [Courses: #hSpc() Architecture of Highload Services #hBar() Backend Development #hBar() Parallel Computing]
-  )
+  description: [Courses: #hSpc() Architecture of Highload Services #hBar() Backend Development #hBar() Parallel Computing]
 )
 
 #cvEntry(
@@ -30,7 +26,5 @@
   date: [September 2016 - June 2020],
   location: [Saint Petersburg, Russia #hDot() On-site],
   logo: "./assets/logos/hse.png",
-  description: list(
-    [Courses: #hSpc() Data Science #hBar() Statistical analysis #hBar() Economic Theory #hBar() Econometrics]
-  )
+  description: [Courses: #hSpc() Data Science #hBar() Statistical analysis #hBar() Economic Theory #hBar() Econometrics]
 )

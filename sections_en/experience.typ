@@ -8,7 +8,7 @@
   date: [January 2023 - March 2023 #hDot() 3 months],
   location: [Munich, Germany #hDot() Hybrid],
   logo: "./assets/logos/stb.png",
-  description: list(
+  description: list(marker: [➤],
     [Set up automatic generation of custom Grafana dashboards.],
     [Created a Rust client for sending log streams to Grafana Loki.],
     [Migrated +20 GiB of IoT sensor data from AWS Timestream to InfluxDB.],
@@ -24,7 +24,7 @@
   date: [October 2021 - April 2022 #hDot() 7 months],
   location: [Moscow, Russia #hDot() Hybrid],
   logo: "./assets/logos/phy.png",
-  description: list(
+  description: list(marker: [➤],
     [Adapted and deployed RIFE and AdaAttN models as web services using Docker and RabbitMQ.],
     [Compared neural and differentiable renderers and wrote blog posts reviewing the recent papers.],
     [Implemented a point cloud boundary detection algorithm from a scientific publication in Python.],

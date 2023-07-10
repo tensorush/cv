@@ -13,10 +13,10 @@
   set page(
     paper: "a4",
     margin: (
-      left: 1.4cm,
-      right: 1.4cm,
-      top: .8cm,
-      bottom: .4cm,
+      left: .5in,
+      right: .5in,
+      top: .2in,
+      bottom: .2in,
     ),
   )
   doc
@@ -42,6 +42,13 @@
 
 /* Styles */
 
+#let headerFont = "Roboto"
+
+#let afterHeaderSkip = -8pt
+#let beforeEntrySkip = 1pt
+#let beforeSectionSkip = 1pt
+#let beforeEntryDescriptionSkip = 1pt
+
 #let awesomeColors = (
   skyblue: rgb("#0395DE"),
   red: rgb("#DC3522"),
@@ -56,12 +63,6 @@
 )
 
 #let accentColor = awesomeColors.at(awesomeColor)
-
-#let headerFont = "Roboto"
-
-#let beforeEntrySkip = 1pt
-#let beforeSectionSkip = 1pt
-#let beforeEntryDescriptionSkip = 1pt
 
 #let headerFirstNameStyle(str) = {text(
   font: headerFont,
@@ -213,9 +214,9 @@
 
 #let makeHeaderPhotoSection() = {
   if profilePhoto != "" {
-    image(profilePhoto, height: 3.6cm)
+    image(profilePhoto, height: 1.4in)
   } else {
-    v(3.6cm)
+    v(1.4in)
   }
 }
 
@@ -234,11 +235,11 @@
   } else {
     makeHeader(makeHeaderNameSection(language), makeHeaderPhotoSection(), (auto, 0%), align)
   }
+  v(afterHeaderSkip)
 }
 
 #let cvSection(title) = {
   let highlightText = title.slice(0)
-
   v(beforeSectionSkip)
   sectionTitleStyle(highlightText, color: accentColor)
   h(2pt)

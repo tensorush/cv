@@ -1,7 +1,7 @@
 /* Personal Information */
 
 #let firstName = (
-    "en": "Jora",
+    "en": "Georgii (Jora)",
     "ru": "Георгий (Жора)",
 )
 
