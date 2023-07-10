@@ -13,8 +13,8 @@
 )
 
 #cvProject(
-  title: [#link("https://github.com/tensorush/zig-uuid")[#gh #hSpc() uuid]],
-  description: [#emoji.lizard #emoji.id Zig-реализация всех версий всемирно уникального идентификатора (UUID).]
+  title: [#link("https://github.com/tensorush/zig-typeid")[#gh #hSpc() typeid]],
+  description: [#emoji.lizard #emoji.id Zig-реализация TypeID, типизированного расширения UUIDv7, созданного командой jetpack.io.]
 )
 
 #cvProject(
