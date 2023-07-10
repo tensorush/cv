@@ -4,10 +4,10 @@
 
 #cvEntry(
   title: [Cloud Software Engineer (Python/Rust/SQL)],
-  society: [STABL Energy #hDot() Стажировка],
-  logo: "./assets/logos/stb.png",
+  society: [#link("https://github.com/Stabl-Energy")[#gh #hSpc() STABL Energy] #hDot() Стажировка],
   date: [Январь 2023 - Март 2023 #hDot() 3 месяца],
   location: [Мюнхен, Германия #hDot() Комбинированный режим],
+  logo: "./assets/logos/stb.png",
   description: list(
     [Написал Rust-клиент для отправки логов в Grafana Loki.],
     [Мигрировал +20 GiB данных IoT-датчиков из AWS Timestream в InfluxDB.],
@@ -20,10 +20,10 @@
 
 #cvEntry(
   title: [Deep Learning Engineer (Python/C++/CUDA)],
-  society: [PHYGITALISM #hDot() Полная занятость],
-  logo: "./assets/logos/phy.png",
+  society: [#link("https://github.com/phygitalism")[#gh #hSpc() PHYGITALISM] #hDot() Полная занятость],
   date: [Октябрь 2021 - Апрель 2022 #hDot() 7 месяцев],
   location: [Москва, Россия #hDot() Комбинированный режим],
+  logo: "./assets/logos/phy.png",
   description: list(
     [Реализовал алгоритм обнаружения границ облака точек из научной публикации на Python.],
     [Адаптировал модели RIFE и AdaAttN в качестве веб-сервисов при помощи Docker и RabbitMQ.],

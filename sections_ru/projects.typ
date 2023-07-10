@@ -3,21 +3,33 @@
 #cvSection("Проекты")
 
 #cvProject(
-  title: [#link("https://github.com/tensorush/bookkeeper")[#gh #hSpc() bookkeeper]],
-  description: [#emoji.hamster #emoji.books Серверная часть для бухгалтерской службы.]
+  title: [MessagePack],
+  description: [#emoji.lizard #emoji.mail Zig-порт формата бинарной сериализации MessagePack, реализованный командой Tarantool.],
+  link: [#link("https://github.com/tensorush/zig-msgpuck")[#gh #hSpc() tensorush/zig-msgpuck]],
+  status: [Разрабатывается],
+  logo: "./assets/logos/mgp.png"
 )
 
 #cvProject(
-  title: [#link("https://github.com/tensorush/zig-msgpuck")[#gh #hSpc() msgpuck]],
-  description: [#emoji.lizard #emoji.mail Zig-порт формата бинарной сериализации MessagePack, реализованный командой Tarantool.]
+  title: [Bookkeeper],
+  description: [#emoji.hamster #emoji.books Серверная часть бухгалтерской службы.],
+  link: [#link("https://github.com/tensorush/bookkeeper")[#gh #hSpc() tensorush/bookkeeper]],
+  status: [Завершен],
+  logo: "./assets/logos/bkr.png"
 )
 
 #cvProject(
-  title: [#link("https://github.com/tensorush/zig-typeid")[#gh #hSpc() typeid]],
-  description: [#emoji.lizard #emoji.id Zig-реализация TypeID, типизированного расширения UUIDv7, созданного командой jetpack.io.]
+  title: [UUID],
+  description: [#emoji.lizard #emoji.id Zig-реализация всех версий всемирно уникального идентификатора.],
+  link: [#link("https://github.com/tensorush/zig-uuid")[#gh #hSpc() tensorush/zig-uuid]],
+  status: [Поддерживается],
+  logo: "./assets/logos/uid.png"
 )
 
 #cvProject(
-  title: [#link("https://github.com/tensorush/vault")[#gh #hSpc() vault]],
-  description: [#emoji.hamster #emoji.lock Telegram-бот для безопасного хранения паролей.]
+  title: [Vault],
+  description: [#emoji.hamster #emoji.lock Telegram-бот для безопасного хранения паролей.],
+  link: [#link("https://github.com/tensorush/vault")[#gh #hSpc() tensorush/vault]],
+  status: [Завершен],
+  logo: "./assets/logos/vlt.png"
 )

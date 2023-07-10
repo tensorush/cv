@@ -60,7 +60,6 @@
 #let headerFont = "Roboto"
 
 #let beforeEntrySkip = 1pt
-#let beforeProjectSkip = 4pt
 #let beforeSectionSkip = 1pt
 #let beforeEntryDescriptionSkip = 1pt
 
@@ -127,12 +126,6 @@
   style: "oblique",
   str
 ))}
-
-#let projectStyle(str) = {text(
-  size: 10pt,
-  weight: "bold",
-  str
-)}
 
 #let entryDescriptionStyle(str) = {text(
   fill: regularColors.lightgray,
@@ -296,17 +289,40 @@
 
 #let cvProject(
   title: "Title",
+  link: "Link",
+  status: "Status",
   description: "Description",
+  logo: ""
 ) = {
-  v(beforeProjectSkip)
+  let ifLogo(path, ifTrue, ifFalse) = {
+    return if varDisplayLogo {
+      if path == "" { ifFalse } else { ifTrue }
+    } else { ifFalse }
+  }
+  let setLogoLength(path) = {
+    return if path == "" { 0% } else { 4% }
+  }
+  let setLogoContent(path) = {
+    return if logo == "" [] else {image(path, width: 100%)}
+  }
+  v(beforeEntrySkip)
   table(
+    columns: (ifLogo(logo, 4%, 0%), 1fr),
+    inset: 0pt,
+    stroke: none,
+    align: horizon,
+    column-gutter: ifLogo(logo, 4pt, 0pt),
+    setLogoContent(logo),
+    table(
       columns: (1fr, auto),
-      inset: -3pt,
+      inset: 0pt,
       stroke: none,
-      align: horizon,
       row-gutter: 6pt,
-      column-gutter: 0pt,
-      {projectStyle(title)},
+      align: auto,
+      {if varEntrySocietyFirst {entryA1Style(link)} else {entryA1Style(title)}},
+      {entryA2Style(status)},
+      {if varEntrySocietyFirst {entryB1Style(title)} else {entryB1Style(link)}},
+    )
   )
   entryDescriptionStyle(description)
 }
