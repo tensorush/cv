@@ -64,6 +64,7 @@ Colors
 Font Awesome Icons
 */
 
+#let lk = fa-link()
 #let gh = fa-github()
 #let tg = fa-telegram()
 #let li = fa-linkedin()
@@ -229,6 +230,7 @@ Functions
     github: gh,
     telegram: tg,
     linkedin: li,
+    homepage: lk,
     extraInfo: "",
   )
   let n = 1
