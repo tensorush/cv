@@ -1,3 +1,3 @@
 cv:
-    typst --font-path ./assets/fonts/ c ./cv_en.typ ./out/en.pdf
-    typst --font-path ./assets/fonts/ c ./cv_ru.typ ./out/ru.pdf
+    typst --font-path ./src/assets/fonts/ c ./src/en.typ ./out/en.pdf
+    typst --font-path ./src/assets/fonts/ c ./src/ru.typ ./out/ru.pdf

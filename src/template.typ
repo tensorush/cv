@@ -1,7 +1,69 @@
-#import "metadata.typ": *
 #import "@preview/fontawesome:0.1.0": *
 
-/* Layout */
+/*
+Personal Information
+*/
+
+#let firstName = (
+    "en": "Georgii (Jora)",
+    "ru": "Георгий (Жора)",
+)
+
+#let lastName = (
+    "en": "Troosh",
+    "ru": "Труш",
+)
+
+#let personalInfo = (
+  github: "tensorush",
+  telegram: "tensorush",
+  linkedin: "tensorush",
+  email: "tensorush@gmail.com",
+)
+
+#let headerSummary = (
+  "en": "Open to Go/Lua SWE positions, especially working on developer systems and tools.",
+  "ru": "Готов к разработке на Go/Lua, особенно над инструментами для разработчиков.",
+)
+
+/*
+Layout Settings
+*/
+
+#let headerFont = "Roboto"
+
+#let varDisplayLogo = true
+
+#let varEntryHostFirst = false
+
+#let profilePhoto = "./assets/photo.png"
+
+#let color = "shamrock_green"
+
+#let colors = (
+  teal: rgb("#008080"),
+  iris: rgb("#5D3FD3"),
+  amber: rgb("#FFBF00"),
+  coral: rgb("#FF7F50"),
+  mauve: rgb("#E0B0FF"),
+  salmon: rgb("#FA8072"),
+  crimson: rgb("#DC143C"),
+  amaranth: rgb("#9F2B68"),
+  dark_gray: rgb("#A9A9A9"),
+  jet_black: rgb("#343434"),
+  royal_blue: rgb("#4169E1"),
+  cadmium_orange: rgb("#F28C28"),
+  shamrock_green: rgb("#009E60"),
+)
+
+#let afterHeaderSkip = -8pt
+#let beforeEntrySkip = 1pt
+#let beforeSectionSkip = 1pt
+#let beforeEntryDescriptionSkip = 1pt
+
+/*
+Layout
+*/
 
 #let layout(doc) = {
   set text(
@@ -22,7 +84,9 @@
   doc
 }
 
-/* Utility Functions */
+/*
+Utility Functions
+*/
 
 #let hSpc() = [
   #h(2pt)
@@ -36,39 +100,20 @@
   #hSpc() · #hSpc()
 ]
 
-#let autoImport(file, language) = {
-  include {"sections_" + language + "/" + file + ".typ"}
+#let autoImport(file, lang) = {
+  include {"sections/" + lang + "/" + file + ".typ"}
 }
 
-/* Styles */
+/*
+Styles
+*/
 
-#let headerFont = "Roboto"
-
-#let afterHeaderSkip = -8pt
-#let beforeEntrySkip = 1pt
-#let beforeSectionSkip = 1pt
-#let beforeEntryDescriptionSkip = 1pt
-
-#let awesomeColors = (
-  skyblue: rgb("#0395DE"),
-  red: rgb("#DC3522"),
-  nephritis: rgb("#27AE60"),
-  concrete: rgb("#95A5A6"),
-  darknight: rgb("#131A28"),
-)
-
-#let regularColors = (
-  lightgray: rgb("#343a40"),
-  darkgray: rgb("#212529"),
-)
-
-#let accentColor = awesomeColors.at(awesomeColor)
+#let accentColor = colors.at(color)
 
 #let headerFirstNameStyle(str) = {text(
   font: headerFont,
   size: 32pt,
   weight: "light",
-  fill: regularColors.darkgray,
   str
 )}
 
@@ -89,11 +134,11 @@
   size: 10pt,
   weight: "medium",
   style: "italic",
-  fill: black,
+  fill: colors.jet_black,
   str
 )}
 
-#let sectionTitleStyle(str, color:black) = {text(
+#let sectionTitleStyle(str, color:colors.jet_black) = {text(
   size: 16pt,
   weight: "bold",
   fill: color,
@@ -123,13 +168,13 @@
 #let entryB2Style(str) = {align(right, text(
   size: 8pt,
   weight: "medium",
-  fill: gray,
+  fill: colors.dark_gray,
   style: "oblique",
   str
 ))}
 
 #let entryDescriptionStyle(str) = {text(
-  fill: regularColors.lightgray,
+  fill: colors.jet_black,
   {
     v(beforeEntryDescriptionSkip)
     str
@@ -152,7 +197,9 @@
   smallcaps(str)
 )}
 
-/* Font Awesome Icons */
+/*
+Font Awesome Icons
+*/
 
 #let lua = fa-moon()
 #let go = fa-golang()
@@ -163,7 +210,9 @@
 #let gh = fa-github()
 #let gha = fa-github-alt()
 
-/* Functions */
+/*
+Functions
+*/
 
 #let makeHeaderInfo() = {
   let personalInfoIcons = (
@@ -200,15 +249,15 @@
   }
 }
 
-#let makeHeaderNameSection(language) = table(
+#let makeHeaderNameSection(lang) = table(
   columns: 1fr,
   inset: 0pt,
   stroke: none,
   row-gutter: 6mm,
-  [#headerFirstNameStyle(firstName.at(language)) #h(5pt) #headerLastNameStyle(lastName.at(language))],
+  [#headerFirstNameStyle(firstName.at(lang)) #h(5pt) #headerLastNameStyle(lastName.at(lang))],
   [#headerInfoStyle(makeHeaderInfo())],
-  if headerSummary.at(language) != "" [
-    #headerSummaryStyle(headerSummary.at(language))
+  if headerSummary.at(lang) != "" [
+    #headerSummaryStyle(headerSummary.at(lang))
   ]
 )
 
@@ -220,7 +269,7 @@
   }
 }
 
-#let cvHeader(align: left, hasPhoto: true, language) = {
+#let cvHeader(align: left, hasPhoto: true, lang) = {
   let makeHeader(leftComp, rightComp, columns, align) = table(
     columns: columns,
     inset: 0pt,
@@ -231,9 +280,9 @@
     {rightComp}
   )
   if hasPhoto {
-    makeHeader(makeHeaderNameSection(language), makeHeaderPhotoSection(), (auto, 20%), align)
+    makeHeader(makeHeaderNameSection(lang), makeHeaderPhotoSection(), (auto, 20%), align)
   } else {
-    makeHeader(makeHeaderNameSection(language), makeHeaderPhotoSection(), (auto, 0%), align)
+    makeHeader(makeHeaderNameSection(lang), makeHeaderPhotoSection(), (auto, 0%), align)
   }
   v(afterHeaderSkip)
 }
@@ -248,11 +297,11 @@
 
 #let cvEntry(
   title: "Title",
-  society: "Society",
+  host: "Host",
   date: "Date",
-  location: "Location",
-  description: "Description",
-  logo: ""
+  mode: "Mode",
+  logo: "",
+  desc: "Desc",
 ) = {
   let ifLogo(path, ifTrue, ifFalse) = {
     return if varDisplayLogo {
@@ -279,53 +328,13 @@
       stroke: none,
       row-gutter: 6pt,
       align: auto,
-      {if varEntrySocietyFirst {entryA1Style(society)} else {entryA1Style(title)}},
+      {if varEntryHostFirst {entryA1Style(host)} else {entryA1Style(title)}},
       {entryA2Style(date)},
-      {if varEntrySocietyFirst {entryB1Style(title)} else {entryB1Style(society)}},
-      {entryB2Style(location)},
+      {if varEntryHostFirst {entryB1Style(title)} else {entryB1Style(host)}},
+      {entryB2Style(mode)},
     )
   )
-  entryDescriptionStyle(description)
-}
-
-#let cvProject(
-  title: "Title",
-  link: "Link",
-  status: "Status",
-  description: "Description",
-  logo: ""
-) = {
-  let ifLogo(path, ifTrue, ifFalse) = {
-    return if varDisplayLogo {
-      if path == "" { ifFalse } else { ifTrue }
-    } else { ifFalse }
-  }
-  let setLogoLength(path) = {
-    return if path == "" { 0% } else { 4% }
-  }
-  let setLogoContent(path) = {
-    return if logo == "" [] else {image(path, width: 100%)}
-  }
-  v(beforeEntrySkip)
-  table(
-    columns: (ifLogo(logo, 4%, 0%), 1fr),
-    inset: 0pt,
-    stroke: none,
-    align: horizon,
-    column-gutter: ifLogo(logo, 4pt, 0pt),
-    setLogoContent(logo),
-    table(
-      columns: (1fr, auto),
-      inset: 0pt,
-      stroke: none,
-      row-gutter: 6pt,
-      align: auto,
-      {if varEntrySocietyFirst {entryA1Style(link)} else {entryA1Style(title)}},
-      {entryA2Style(status)},
-      {if varEntrySocietyFirst {entryB1Style(title)} else {entryB1Style(link)}},
-    )
-  )
-  entryDescriptionStyle(description)
+  entryDescriptionStyle(desc)
 }
 
 #let cvSkill(

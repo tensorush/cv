@@ -37,7 +37,7 @@ jobs:
       - name: Set up Just
         uses: extractions/setup-just@v1
 
-      - name: Emit PDF
+      - name: Build CV
         run: |
           just cv
 
