@@ -56,14 +56,14 @@ Layout Settings
   shamrock_green: rgb("#009E60"),
 )
 
+/*
+Layout
+*/
+
 #let afterHeaderSkip = -8pt
 #let beforeEntrySkip = 1pt
 #let beforeSectionSkip = 1pt
 #let beforeEntryDescriptionSkip = 1pt
-
-/*
-Layout
-*/
 
 #let layout(doc) = {
   set text(
@@ -77,8 +77,8 @@ Layout
     margin: (
       left: .5in,
       right: .5in,
-      top: .2in,
-      bottom: .2in,
+      top: .15in,
+      bottom: .15in,
     ),
   )
   doc
