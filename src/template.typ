@@ -34,11 +34,15 @@ Layout Settings
 
 #let varDisplayLogo = true
 
+#let color = "shamrock_green"
+
 #let varEntryHostFirst = false
 
 #let profilePhoto = "./assets/photo.png"
 
-#let color = "shamrock_green"
+/*
+Colors
+*/
 
 #let colors = (
   teal: rgb("#008080"),
@@ -57,10 +61,27 @@ Layout Settings
 )
 
 /*
+Font Awesome Icons
+*/
+
+#let gh = fa-github()
+#let tg = fa-telegram()
+#let li = fa-linkedin()
+#let em = fa-envelope()
+
+#let go = fa-golang()
+#let lua = fa-moon()
+#let zig = fa-bolt()
+#let dbms = fa-database()
+#let docker = fa-docker()
+#let linux = fa-linux()
+#let github = fa-github-alt()
+
+/*
 Layout
 */
 
-#let afterHeaderSkip = -10pt
+#let afterHeaderSkip = -9pt
 #let beforeEntrySkip = 1pt
 #let beforeSectionSkip = 1pt
 #let beforeEntryDescriptionSkip = 1pt
@@ -197,18 +218,6 @@ Styles
   smallcaps(str)
 )}
 
-/*
-Font Awesome Icons
-*/
-
-#let lua = fa-moon()
-#let go = fa-golang()
-#let zig = fa-bolt()
-#let dbms = fa-database()
-#let docker = fa-docker()
-#let linux = fa-linux()
-#let gh = fa-github()
-#let gha = fa-github-alt()
 
 /*
 Functions
@@ -216,12 +225,10 @@ Functions
 
 #let makeHeaderInfo() = {
   let personalInfoIcons = (
-    phone: fa-phone(),
-    email: fa-envelope(),
-    telegram: fa-telegram(),
-    linkedin: fa-linkedin(),
-    homepage: fa-pager(),
+    email: em,
     github: gh,
+    telegram: tg,
+    linkedin: li,
     extraInfo: "",
   )
   let n = 1
@@ -239,8 +246,6 @@ Functions
         link("https://www.linkedin.com/in/" + v)[#v]
       } else if k == "github" {
         link("https://github.com/" + v)[#v]
-      } else if k == "homepage" {
-        link("https://" + v)[#v]
       } else {
         v
       }
