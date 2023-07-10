@@ -60,7 +60,7 @@ Layout Settings
 Layout
 */
 
-#let afterHeaderSkip = -8pt
+#let afterHeaderSkip = -10pt
 #let beforeEntrySkip = 1pt
 #let beforeSectionSkip = 1pt
 #let beforeEntryDescriptionSkip = 1pt
