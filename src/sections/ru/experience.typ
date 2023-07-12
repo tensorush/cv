@@ -20,7 +20,7 @@
 
 #cvEntry(
   title: [Deep Learning Engineer (Python/C++/CUDA)],
-  host: [#link("https://github.com/phygitalism")[#gh #hSpc() PHYGITALISM] #hDot() Полная занятость],
+  host: [#link("https://github.com/phygitalism")[#gh #hSpc() Phygitalism] #hDot() Полная занятость],
   date: [Октябрь 2021 — Апрель 2022 (7 месяцев)],
   mode: [Москва, Россия #hDot() Комбинированный режим],
   logo: "./assets/logos/phy.png",

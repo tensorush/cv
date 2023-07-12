@@ -22,8 +22,8 @@ Personal Information
 )
 
 #let headerSummary = (
-  "en": "Open to Go/Lua SWE positions, especially working on developer systems and tools.",
-  "ru": "Готов к разработке на Go/Lua, особенно над инструментами для разработчиков.",
+  "en": "Open to Go/Rust SWE positions, especially working on developer systems and tools.",
+  "ru": "Готов к разработке на Go/Rust, особенно над инструментами для разработчиков.",
 )
 
 /*
@@ -71,7 +71,7 @@ Font Awesome Icons
 #let em = fa-envelope()
 
 #let go = fa-golang()
-#let lua = fa-moon()
+#let rust = fa-gear()
 #let zig = fa-bolt()
 #let dbms = fa-database()
 #let docker = fa-docker()
