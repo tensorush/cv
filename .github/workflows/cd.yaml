@@ -38,8 +38,7 @@ jobs:
         uses: extractions/setup-just@v1
 
       - name: Build CV
-        run: |
-          just cv
+        run: just cv
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v3

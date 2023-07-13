@@ -53,8 +53,12 @@ Colors
   salmon: rgb("#FA8072"),
   crimson: rgb("#DC143C"),
   amaranth: rgb("#9F2B68"),
+  charcoal: rgb("#36454F"),
+  cornsilk: rgb("#FFF8DC"),
+  platinum: rgb("#E5E4E2"),
   dark_gray: rgb("#A9A9A9"),
   jet_black: rgb("#343434"),
+  light_gray: rgb("#D3D3D3"),
   royal_blue: rgb("#4169E1"),
   cadmium_orange: rgb("#F28C28"),
   shamrock_green: rgb("#009E60"),
@@ -96,6 +100,7 @@ Layout
   set align(left)
   set page(
     paper: "a4",
+    fill: colors.charcoal,
     margin: (
       left: .5in,
       right: .5in,
@@ -135,6 +140,7 @@ Styles
 #let headerFirstNameStyle(str) = {text(
   font: headerFont,
   size: 32pt,
+  fill: colors.platinum,
   weight: "light",
   str
 )}
@@ -142,6 +148,7 @@ Styles
 #let headerLastNameStyle(str) = {text(
   font: headerFont,
   size: 32pt,
+  fill: colors.platinum,
   weight: "bold",
   str
 )}
@@ -156,11 +163,11 @@ Styles
   size: 10pt,
   weight: "medium",
   style: "italic",
-  fill: colors.jet_black,
+  fill: colors.platinum,
   str
 )}
 
-#let sectionTitleStyle(str, color:colors.jet_black) = {text(
+#let sectionTitleStyle(str, color:colors.platinum) = {text(
   size: 16pt,
   weight: "bold",
   fill: color,
@@ -169,6 +176,7 @@ Styles
 
 #let entryA1Style(str) = {text(
   size: 10pt,
+  fill: colors.platinum,
   weight: "bold",
   str
 )}
@@ -196,7 +204,7 @@ Styles
 ))}
 
 #let entryDescriptionStyle(str) = {text(
-  fill: colors.jet_black,
+  fill: colors.light_gray,
   {
     v(beforeEntryDescriptionSkip)
     str
@@ -205,11 +213,13 @@ Styles
 
 #let skillTypeStyle(str) = {align(right, text(
   size: 10pt,
+  fill: colors.platinum,
   weight: "bold",
   str))
 }
 
 #let skillInfoStyle(str) = {text(
+  fill: colors.light_gray,
   str
 )}
 
@@ -218,7 +228,6 @@ Styles
   fill: rgb("#999999"),
   smallcaps(str)
 )}
-
 
 /*
 Functions
@@ -299,7 +308,7 @@ Functions
   v(beforeSectionSkip)
   sectionTitleStyle(highlightText, color: accentColor)
   h(2pt)
-  box(width: 1fr, line(stroke: 0.9pt, length: 100%))
+  box(width: 1fr, line(stroke: 0.9pt + colors.light_gray, length: 100%))
 }
 
 #let cvEntry(
