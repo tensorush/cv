@@ -22,23 +22,9 @@ Personal Information
 )
 
 #let headerSummary = (
-  "en": "Open to Go/Rust SWE positions, especially working on developer systems and tools.",
-  "ru": "Готов к разработке на Go/Rust, особенно над инструментами для разработчиков.",
+  "en": "Open to Go/Rust/Zig SWE positions, especially working on developer systems and tools.",
+  "ru": "Готов к разработке на Go/Rust/Zig, особенно над инструментами для разработчиков.",
 )
-
-/*
-Layout Settings
-*/
-
-#let headerFont = "Roboto"
-
-#let varDisplayLogo = true
-
-#let color = "shamrock_green"
-
-#let varEntryHostFirst = false
-
-#let profilePhoto = "./assets/photo.png"
 
 /*
 Colors
@@ -49,6 +35,7 @@ Colors
   iris: rgb("#5D3FD3"),
   amber: rgb("#FFBF00"),
   coral: rgb("#FF7F50"),
+  linen: rgb("#E9DCC9"),
   mauve: rgb("#E0B0FF"),
   salmon: rgb("#FA8072"),
   crimson: rgb("#DC143C"),
@@ -60,6 +47,7 @@ Colors
   jet_black: rgb("#343434"),
   light_gray: rgb("#D3D3D3"),
   royal_blue: rgb("#4169E1"),
+  matte_black: rgb("#28282B"),
   cadmium_orange: rgb("#F28C28"),
   shamrock_green: rgb("#009E60"),
 )
@@ -83,13 +71,33 @@ Font Awesome Icons
 #let github = fa-github-alt()
 
 /*
+Layout Settings
+*/
+
+#let headerFont = "Roboto"
+
+#let varDisplayLogo = true
+
+#let titleColor = colors.linen
+
+#let dateColor = colors.dark_gray
+
+#let descColor = colors.light_gray
+
+#let pageColor = colors.matte_black
+
+#let accentColor = colors.shamrock_green
+
+#let profilePhoto = "./assets/photo.png"
+
+/*
 Layout
 */
 
 #let afterHeaderSkip = -9pt
 #let beforeEntrySkip = 1pt
 #let beforeSectionSkip = 1pt
-#let beforeEntryDescriptionSkip = 1pt
+#let beforeEntryDescSkip = 1pt
 
 #let layout(doc) = {
   set text(
@@ -100,7 +108,7 @@ Layout
   set align(left)
   set page(
     paper: "a4",
-    fill: colors.charcoal,
+    fill: pageColor,
     margin: (
       left: .5in,
       right: .5in,
@@ -135,12 +143,10 @@ Utility Functions
 Styles
 */
 
-#let accentColor = colors.at(color)
-
 #let headerFirstNameStyle(str) = {text(
   font: headerFont,
   size: 32pt,
-  fill: colors.platinum,
+  fill: titleColor,
   weight: "light",
   str
 )}
@@ -148,7 +154,7 @@ Styles
 #let headerLastNameStyle(str) = {text(
   font: headerFont,
   size: 32pt,
-  fill: colors.platinum,
+  fill: titleColor,
   weight: "bold",
   str
 )}
@@ -163,63 +169,64 @@ Styles
   size: 10pt,
   weight: "medium",
   style: "italic",
-  fill: colors.platinum,
+  fill: descColor,
   str
 )}
 
-#let sectionTitleStyle(str, color:colors.platinum) = {text(
+#let sectionTitleStyle(str, color:titleColor) = {text(
   size: 16pt,
   weight: "bold",
   fill: color,
   str
 )}
 
-#let entryA1Style(str) = {text(
+#let entryTitleStyle(str) = {text(
   size: 10pt,
-  fill: colors.platinum,
+  fill: titleColor,
   weight: "bold",
   str
 )}
 
-#let entryA2Style(str) = {align(right, text(
-  weight: "medium",
-  fill: accentColor,
-  style: "oblique",
-  str
-))}
 
-#let entryB1Style(str) = {text(
+#let entryHostStyle(str) = {text(
   size: 8pt,
   fill: accentColor,
   weight: "medium",
   smallcaps(str)
 )}
 
-#let entryB2Style(str) = {align(right, text(
-  size: 8pt,
+#let entryDateStyle(str) = {align(right, text(
   weight: "medium",
-  fill: colors.dark_gray,
+  fill: accentColor,
   style: "oblique",
   str
 ))}
 
-#let entryDescriptionStyle(str) = {text(
-  fill: colors.light_gray,
+#let entryModeStyle(str) = {align(right, text(
+  size: 8pt,
+  weight: "medium",
+  fill: dateColor,
+  style: "oblique",
+  str
+))}
+
+#let entryDescStyle(str) = {text(
+  fill: descColor,
   {
-    v(beforeEntryDescriptionSkip)
+    v(beforeEntryDescSkip)
     str
   }
 )}
 
 #let skillTypeStyle(str) = {align(right, text(
   size: 10pt,
-  fill: colors.platinum,
+  fill: titleColor,
   weight: "bold",
   str))
 }
 
 #let skillInfoStyle(str) = {text(
-  fill: colors.light_gray,
+  fill: descColor,
   str
 )}
 
@@ -308,7 +315,7 @@ Functions
   v(beforeSectionSkip)
   sectionTitleStyle(highlightText, color: accentColor)
   h(2pt)
-  box(width: 1fr, line(stroke: 0.9pt + colors.light_gray, length: 100%))
+  box(width: 1fr, line(stroke: 0.9pt + descColor, length: 100%))
 }
 
 #let cvEntry(
@@ -344,13 +351,13 @@ Functions
       stroke: none,
       row-gutter: 6pt,
       align: auto,
-      {if varEntryHostFirst {entryA1Style(host)} else {entryA1Style(title)}},
-      {entryA2Style(date)},
-      {if varEntryHostFirst {entryB1Style(title)} else {entryB1Style(host)}},
-      {entryB2Style(mode)},
+      {entryTitleStyle(title)},
+      {entryDateStyle(date)},
+      {entryHostStyle(host)},
+      {entryModeStyle(mode)},
     )
   )
-  entryDescriptionStyle(desc)
+  entryDescStyle(desc)
 }
 
 #let cvSkill(
