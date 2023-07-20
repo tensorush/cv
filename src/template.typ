@@ -22,8 +22,8 @@ Personal Information
 )
 
 #let headerSummary = (
-  "en": "Open to Go/Rust/Zig SWE positions, especially working on developer systems and tools.",
-  "ru": "Готов к разработке на Go/Rust/Zig, особенно над инструментами для разработчиков.",
+  "en": "Open to Go Software Engineer positions, especially working on developer tools.",
+  "ru": "Готов к разработке на Go, особенно над инструментами для разработчиков.",
 )
 
 /*

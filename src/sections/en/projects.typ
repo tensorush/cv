@@ -23,7 +23,7 @@
 #cvEntry(
   title: [UUID],
   host: [#link("https://github.com/tensorush/zig-uuid")[#gh #hSpc() tensorush/zig-uuid]],
-  date: [Jul 13, 2023, 02:32 PM GMT],
+  date: [Jul 20, 2023, 08:20 PM GMT],
   mode: [On maintenance],
   logo: "./assets/logos/uid.png",
   desc: [#emoji.lizard #emoji.id Zig implementation of all the Universally Unique IDentifier versions.],
