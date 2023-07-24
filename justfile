@@ -3,9 +3,9 @@ cv:
     typst --font-path ./src/assets/fonts/ c ./src/ru.typ ./out/ru.pdf
 
 lcs:
-    just lc tensorush/zig-msgpuck main
     just lc tensorush/bookkeeper main
-    just lc tensorush/zig-uuid main
+    just lc tensorush/meduza main
+    just lc tensorush/zigzag main
     just lc tensorush/vault main
 
 lc REPO BRANCH:

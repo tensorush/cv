@@ -3,15 +3,6 @@
 #cvSection("Projects")
 
 #cvEntry(
-  title: [MessagePack],
-  host: [#link("https://github.com/tensorush/zig-msgpuck")[#gh #hSpc() tensorush/zig-msgpuck]],
-  date: [Jul 12, 2023, 11:22 AM GMT],
-  mode: [In development],
-  logo: "./assets/logos/mgp.png",
-  desc: [#emoji.lizard #emoji.mail Zig port of the MessagePack binary serialization format implemented by the Tarantool team.],
-)
-
-#cvEntry(
   title: [Bookkeeper],
   host: [#link("https://github.com/tensorush/bookkeeper")[#gh #hSpc() tensorush/bookkeeper]],
   date: [Jul 08, 2023, 12:56 PM GMT],
@@ -21,12 +12,21 @@
 )
 
 #cvEntry(
-  title: [UUID],
-  host: [#link("https://github.com/tensorush/zig-uuid")[#gh #hSpc() tensorush/zig-uuid]],
-  date: [Jul 20, 2023, 08:20 PM GMT],
-  mode: [On maintenance],
-  logo: "./assets/logos/uid.png",
-  desc: [#emoji.lizard #emoji.id Zig implementation of all the Universally Unique IDentifier versions.],
+  title: [Meduza],
+  host: [#link("https://github.com/tensorush/meduza")[#gh #hSpc() tensorush/meduza]],
+  date: [Jul 24, 2023, 07:17 PM GMT],
+  mode: [Maintained],
+  logo: "./assets/logos/mdz.png",
+  desc: [#emoji.lizard #emoji.snake Zig codebase graph generator that emits a Mermaid class diagram.],
+)
+
+#cvEntry(
+  title: [Zigzag],
+  host: [#link("https://github.com/tensorush/zigzag")[#gh #hSpc() tensorush/zigzag]],
+  date: [Jul 24, 2023, 06:52 PM GMT],
+  mode: [Maintained],
+  logo: "./assets/logos/zgz.png",
+  desc: [#emoji.lizard #emoji.trident Multi-threaded CPU path tracer.],
 )
 
 #cvEntry(

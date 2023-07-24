@@ -3,15 +3,6 @@
 #cvSection("Проекты")
 
 #cvEntry(
-  title: [MessagePack],
-  host: [#link("https://github.com/tensorush/zig-msgpuck")[#gh #hSpc() tensorush/zig-msgpuck]],
-  date: [Jul 12, 2023, 11:22 AM GMT],
-  mode: [Разрабатывается],
-  logo: "./assets/logos/mgp.png",
-  desc: [#emoji.lizard #emoji.mail Zig-порт формата бинарной сериализации MessagePack, реализованный командой Tarantool.],
-)
-
-#cvEntry(
   title: [Bookkeeper],
   host: [#link("https://github.com/tensorush/bookkeeper")[#gh #hSpc() tensorush/bookkeeper]],
   date: [Jul 08, 2023, 12:56 PM GMT],
@@ -21,12 +12,21 @@
 )
 
 #cvEntry(
-  title: [UUID],
-  host: [#link("https://github.com/tensorush/zig-uuid")[#gh #hSpc() tensorush/zig-uuid]],
-  date: [Jul 20, 2023, 08:20 PM GMT],
+  title: [Meduza],
+  host: [#link("https://github.com/tensorush/meduza")[#gh #hSpc() tensorush/meduza]],
+  date: [Jul 24, 2023, 07:17 PM GMT],
   mode: [Поддерживается],
-  logo: "./assets/logos/uid.png",
-  desc: [#emoji.lizard #emoji.id Zig-реализация всех версий всемирно уникального идентификатора.],
+  logo: "./assets/logos/mdz.png",
+  desc: [#emoji.lizard #emoji.snake Генератор графа Zig-репозитория, создающий классовую диаграмму в формате Mermaid.],
+)
+
+#cvEntry(
+  title: [Zigzag],
+  host: [#link("https://github.com/tensorush/zigzag")[#gh #hSpc() tensorush/zigzag]],
+  date: [Jul 24, 2023, 06:52 PM GMT],
+  mode: [Поддерживается],
+  logo: "./assets/logos/zgz.png",
+  desc: [#emoji.lizard #emoji.trident Трассировщик путей, исполняющийся в многопоточном режиме на ЦПУ.],
 )
 
 #cvEntry(
