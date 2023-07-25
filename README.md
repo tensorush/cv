@@ -3,7 +3,7 @@
 [![CD][cd-shield]][cd-url]
 [![License][license-shield]][license-url]
 
-### My current CV based on the [AwesomeCV Typst template](https://github.com/mintyfrankie/AwesomeCV-Typst) by [Yunan Wang](https://github.com/mintyfrankie).
+### My current CV Typst template available in multiple languages.
 
 <!-- MARKDOWN LINKS -->
 

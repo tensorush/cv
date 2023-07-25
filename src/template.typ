@@ -68,6 +68,7 @@ Font Awesome Icons
 #let dbms = fa-database()
 #let docker = fa-docker()
 #let linux = fa-linux()
+#let nix = fa-snowflake()
 #let github = fa-github-alt()
 
 /*
@@ -75,8 +76,6 @@ Layout Settings
 */
 
 #let headerFont = "Roboto"
-
-#let varDisplayLogo = true
 
 #let titleColor = colors.linen
 
@@ -318,33 +317,15 @@ Functions
   box(width: 1fr, line(stroke: 0.9pt + descColor, length: 100%))
 }
 
-#let cvEntry(
-  title: "Title",
-  host: "Host",
-  date: "Date",
-  mode: "Mode",
-  logo: "",
-  desc: "Desc",
-) = {
-  let ifLogo(path, ifTrue, ifFalse) = {
-    return if varDisplayLogo {
-      if path == "" { ifFalse } else { ifTrue }
-    } else { ifFalse }
-  }
-  let setLogoLength(path) = {
-    return if path == "" { 0% } else { 4% }
-  }
-  let setLogoContent(path) = {
-    return if logo == "" [] else {image(path, width: 100%)}
-  }
+#let cvEntry(title: "Title", host: "Host", date: "Date", mode: "Mode", logo: "", desc: "Desc") = {
   v(beforeEntrySkip)
   table(
-    columns: (ifLogo(logo, 4%, 0%), 1fr),
+    columns: (4%, 1fr),
     inset: 0pt,
     stroke: none,
     align: horizon,
-    column-gutter: ifLogo(logo, 4pt, 0pt),
-    setLogoContent(logo),
+    column-gutter: 4pt,
+    image(logo, width: 100%),
     table(
       columns: (1fr, auto),
       inset: 0pt,
@@ -360,10 +341,7 @@ Functions
   entryDescStyle(desc)
 }
 
-#let cvSkill(
-  type: "Type",
-  info: "Info",
-) = {
+#let cvSkill(type: "Type", info: "Info") = {
   table(
     columns: (16%, 1fr),
     inset: 0pt,
@@ -373,3 +351,7 @@ Functions
     skillInfoStyle(info),
   )
 }
+
+#let techSkills = [
+    #go #hSpc() Go #hBar() #rust #hSpc() Rust #hBar() #zig #hSpc() Zig #hBar() #dbms #hSpc() DBMS #hBar() #docker #hSpc() Docker #hBar() #linux #hSpc() Linux #hBar() #nix #hSpc() Nix #hBar() #github #hSpc() GitHub
+]
