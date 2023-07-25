@@ -14,7 +14,7 @@
 #cvEntry(
   title: [Meduza],
   host: [#link("https://github.com/tensorush/meduza")[#gh #hSpc() tensorush/meduza]],
-  date: [Jul 24, 2023, 07:17 PM GMT],
+  date: [Jul 25, 2023, 11:33 AM GMT],
   mode: [Поддерживается],
   logo: "./assets/logos/mdz.png",
   desc: [#emoji.lizard #emoji.snake Генератор графа Zig-репозитория, создающий классовую диаграмму в формате Mermaid.],
@@ -23,7 +23,7 @@
 #cvEntry(
   title: [Zigzag],
   host: [#link("https://github.com/tensorush/zigzag")[#gh #hSpc() tensorush/zigzag]],
-  date: [Jul 24, 2023, 06:52 PM GMT],
+  date: [Jul 25, 2023, 11:32 AM GMT],
   mode: [Поддерживается],
   logo: "./assets/logos/zgz.png",
   desc: [#emoji.lizard #emoji.trident Трассировщик путей, исполняющийся в многопоточном режиме на ЦПУ.],
