@@ -5,13 +5,13 @@ Personal Information
 */
 
 #let firstName = (
-    "en": "Georgii (Jora)",
-    "ru": "Георгий (Жора)",
+  "en": "Georgii (Jora)",
+  "ru": "Георгий (Жора)",
 )
 
 #let lastName = (
-    "en": "Troosh",
-    "ru": "Труш",
+  "en": "Troosh",
+  "ru": "Труш",
 )
 
 #let personalInfo = (
@@ -23,7 +23,7 @@ Personal Information
 
 #let headerSummary = (
   "en": "Open to Go/Rust/Zig Software Engineering positions, especially working on developer tools.",
-  "ru": "Готов к разработке на Go/Rust/Zig, особенно над инструментами для разработчиков.",
+  "ru": "Готов к работе на Go/Rust/Zig, особенно над инструментами для разработчиков.",
 )
 
 /*
@@ -123,117 +123,151 @@ Utility Functions
 */
 
 #let hSpc() = [
-  #h(2pt)
+#h(2pt)
 ]
 
 #let hBar() = [
-  #hSpc() | #hSpc()
+#hSpc() | #hSpc()
 ]
 
 #let hDot() = [
-  #hSpc() · #hSpc()
+#hSpc() · #hSpc()
 ]
 
 #let autoImport(file, lang) = {
-  include {"sections/" + lang + "/" + file + ".typ"}
+  include { "sections/" + lang + "/" + file + ".typ" }
 }
 
 /*
 Styles
 */
 
-#let headerFirstNameStyle(str) = {text(
-  font: headerFont,
-  size: 32pt,
-  fill: titleColor,
-  weight: "light",
-  str
-)}
-
-#let headerLastNameStyle(str) = {text(
-  font: headerFont,
-  size: 32pt,
-  fill: titleColor,
-  weight: "bold",
-  str
-)}
-
-#let headerInfoStyle(str) = {text(
-  size: 10pt,
-  fill: accentColor,
-  str
-)}
-
-#let headerSummaryStyle(str) = {text(
-  size: 10pt,
-  weight: "medium",
-  style: "italic",
-  fill: descColor,
-  str
-)}
-
-#let sectionTitleStyle(str, color:titleColor) = {text(
-  size: 16pt,
-  weight: "bold",
-  fill: color,
-  str
-)}
-
-#let entryTitleStyle(str) = {text(
-  size: 10pt,
-  fill: titleColor,
-  weight: "bold",
-  str
-)}
-
-
-#let entryHostStyle(str) = {text(
-  size: 8pt,
-  fill: accentColor,
-  weight: "medium",
-  smallcaps(str)
-)}
-
-#let entryDateStyle(str) = {align(right, text(
-  weight: "medium",
-  fill: accentColor,
-  style: "oblique",
-  str
-))}
-
-#let entryModeStyle(str) = {align(right, text(
-  size: 8pt,
-  weight: "medium",
-  fill: dateColor,
-  style: "oblique",
-  str
-))}
-
-#let entryDescStyle(str) = {text(
-  fill: descColor,
-  {
-    v(beforeEntryDescSkip)
-    str
-  }
-)}
-
-#let skillTypeStyle(str) = {align(right, text(
-  size: 10pt,
-  fill: titleColor,
-  weight: "bold",
-  str))
+#let headerFirstNameStyle(str) = {
+  text(
+    font: headerFont,
+    size: 32pt,
+    fill: titleColor,
+    weight: "light",
+    str,
+  )
 }
 
-#let skillInfoStyle(str) = {text(
-  fill: descColor,
-  str
-)}
+#let headerLastNameStyle(str) = {
+  text(
+    font: headerFont,
+    size: 32pt,
+    fill: titleColor,
+    weight: "bold",
+    str,
+  )
+}
 
-#let footerStyle(str) = {text(
-  size: 8pt,
-  fill: rgb("#999999"),
-  smallcaps(str)
-)}
+#let headerInfoStyle(str) = {
+  text(
+    size: 10pt,
+    fill: accentColor,
+    str,
+  )
+}
+
+#let headerSummaryStyle(str) = {
+  text(
+    size: 10pt,
+    weight: "medium",
+    style: "italic",
+    fill: descColor,
+    str,
+  )
+}
+
+#let sectionTitleStyle(str, color: titleColor) = {
+  text(
+    size: 16pt,
+    weight: "bold",
+    fill: color,
+    str,
+  )
+}
+
+#let entryTitleStyle(str) = {
+  text(
+    size: 10pt,
+    fill: titleColor,
+    weight: "bold",
+    str,
+  )
+}
+
+#let entryHostStyle(str) = {
+  text(
+    size: 8pt,
+    fill: accentColor,
+    weight: "medium",
+    smallcaps(str),
+  )
+}
+
+#let entryDateStyle(str) = {
+  align(
+    right,
+    text(
+      weight: "medium",
+      fill: accentColor,
+      style: "oblique",
+      str,
+    ),
+  )
+}
+
+#let entryModeStyle(str) = {
+  align(
+    right,
+    text(
+      size: 8pt,
+      weight: "medium",
+      fill: dateColor,
+      style: "oblique",
+      str,
+    ),
+  )
+}
+
+#let entryDescStyle(str) = {
+  text(
+    fill: descColor,
+    {
+      v(beforeEntryDescSkip)
+      str
+    },
+  )
+}
+
+#let skillTypeStyle(str) = {
+  align(
+    right,
+    text(
+      size: 10pt,
+      fill: titleColor,
+      weight: "bold",
+      str,
+    ),
+  )
+}
+
+#let skillInfoStyle(str) = {
+  text(
+    fill: descColor,
+    str,
+  )
+}
+
+#let footerStyle(str) = {
+  text(
+    size: 8pt,
+    fill: rgb("#999999"),
+    smallcaps(str),
+  )
+}
 
 /*
 Functions
@@ -279,8 +313,8 @@ Functions
   [#headerFirstNameStyle(firstName.at(lang)) #h(5pt) #headerLastNameStyle(lastName.at(lang))],
   [#headerInfoStyle(makeHeaderInfo())],
   if headerSummary.at(lang) != "" [
-    #headerSummaryStyle(headerSummary.at(lang))
-  ]
+  #headerSummaryStyle(headerSummary.at(lang))
+  ],
 )
 
 #let makeHeaderPhotoSection() = {
@@ -298,8 +332,8 @@ Functions
     stroke: none,
     column-gutter: 15pt,
     align: align + horizon,
-    {leftComp},
-    {rightComp}
+    { leftComp },
+    { rightComp },
   )
   if hasPhoto {
     makeHeader(makeHeaderNameSection(lang), makeHeaderPhotoSection(), (auto, 20%), align)
@@ -332,11 +366,11 @@ Functions
       stroke: none,
       row-gutter: 6pt,
       align: auto,
-      {entryTitleStyle(title)},
-      {entryDateStyle(date)},
-      {entryHostStyle(host)},
-      {entryModeStyle(mode)},
-    )
+      { entryTitleStyle(title) },
+      { entryDateStyle(date) },
+      { entryHostStyle(host) },
+      { entryModeStyle(mode) },
+    ),
   )
   entryDescStyle(desc)
 }
@@ -353,5 +387,5 @@ Functions
 }
 
 #let techSkills = [
-    #go #hSpc() Go #hBar() #rust #hSpc() Rust #hBar() #zig #hSpc() Zig #hBar() #dbms #hSpc() DBMS #hBar() #docker #hSpc() Docker #hBar() #linux #hSpc() Linux #hBar() #nix #hSpc() Nix #hBar() #github #hSpc() GitHub
+#go #hSpc() Go #hBar() #rust #hSpc() Rust #hBar() #zig #hSpc() Zig #hBar() #dbms #hSpc() DBMS #hBar() #docker #hSpc() Docker #hBar() #linux #hSpc() Linux #hBar() #nix #hSpc() Nix #hBar() #github #hSpc() GitHub
 ]
