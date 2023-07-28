@@ -3,21 +3,21 @@
 #cvSection("Проекты")
 
 #cvEntry(
+  title: [Meduza],
+  host: [#link("https://github.com/tensorush/meduza")[#gh #hSpc() tensorush/meduza]],
+  date: [Jul 28, 2023, 11:25 AM GMT],
+  mode: [Завершен],
+  logo: "./assets/logos/mdz.png",
+  desc: [#emoji.lizard #emoji.merperson Генератор графа Zig-репозитория, создающий классовую диаграмму в формате Mermaid.],
+)
+
+#cvEntry(
   title: [Bookkeeper],
   host: [#link("https://github.com/tensorush/bookkeeper")[#gh #hSpc() tensorush/bookkeeper]],
   date: [Jul 08, 2023, 12:56 PM GMT],
   mode: [Завершен],
   logo: "./assets/logos/bkr.png",
   desc: [#emoji.hamster #emoji.books Серверная часть бухгалтерской службы.],
-)
-
-#cvEntry(
-  title: [Meduza],
-  host: [#link("https://github.com/tensorush/meduza")[#gh #hSpc() tensorush/meduza]],
-  date: [Jul 28, 2023, 11:25 AM GMT],
-  mode: [Поддерживается],
-  logo: "./assets/logos/mdz.png",
-  desc: [#emoji.lizard #emoji.snake Генератор графа Zig-репозитория, создающий классовую диаграмму в формате Mermaid.],
 )
 
 #cvEntry(

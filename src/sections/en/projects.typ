@@ -3,21 +3,21 @@
 #cvSection("Projects")
 
 #cvEntry(
+  title: [Meduza],
+  host: [#link("https://github.com/tensorush/meduza")[#gh #hSpc() tensorush/meduza]],
+  date: [Jul 28, 2023, 11:25 AM GMT],
+  mode: [Completed],
+  logo: "./assets/logos/mdz.png",
+  desc: [#emoji.lizard #emoji.merperson Zig codebase graph generator that emits a Mermaid class diagram.],
+)
+
+#cvEntry(
   title: [Bookkeeper],
   host: [#link("https://github.com/tensorush/bookkeeper")[#gh #hSpc() tensorush/bookkeeper]],
   date: [Jul 08, 2023, 12:56 PM GMT],
   mode: [Completed],
   logo: "./assets/logos/bkr.png",
   desc: [#emoji.hamster #emoji.books Server backend for a bookkeeping service.],
-)
-
-#cvEntry(
-  title: [Meduza],
-  host: [#link("https://github.com/tensorush/meduza")[#gh #hSpc() tensorush/meduza]],
-  date: [Jul 28, 2023, 11:25 AM GMT],
-  mode: [Maintained],
-  logo: "./assets/logos/mdz.png",
-  desc: [#emoji.lizard #emoji.snake Zig codebase graph generator that emits a Mermaid class diagram.],
 )
 
 #cvEntry(
