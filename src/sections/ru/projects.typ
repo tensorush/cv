@@ -5,7 +5,7 @@
 #cvEntry(
   title: [Meduza],
   host: [#link("https://github.com/tensorush/meduza")[#gh #hSpc() tensorush/meduza]],
-  date: [Jul 28, 2023, 11:25 AM GMT],
+  date: [Jul 28, 2023, 01:55 PM GMT],
   mode: [Завершен],
   logo: "./assets/logos/mdz.png",
   desc: [#emoji.lizard #emoji.merperson Генератор графа Zig-репозитория, создающий классовую диаграмму в формате Mermaid.],

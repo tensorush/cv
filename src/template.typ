@@ -66,6 +66,7 @@ Font Awesome Icons
 #let rust = fa-gear()
 #let zig = fa-bolt()
 #let dbms = fa-database()
+#let aws = fa-aws()
 #let docker = fa-docker()
 #let linux = fa-linux()
 #let nix = fa-snowflake()
@@ -387,5 +388,5 @@ Functions
 }
 
 #let techSkills = [
-#go #hSpc() Go #hBar() #rust #hSpc() Rust #hBar() #zig #hSpc() Zig #hBar() #dbms #hSpc() DBMS #hBar() #docker #hSpc() Docker #hBar() #linux #hSpc() Linux #hBar() #nix #hSpc() Nix #hBar() #github #hSpc() GitHub
+#go #hSpc() Go #hBar() #rust #hSpc() Rust #hBar() #zig #hSpc() Zig #hBar() #dbms #hSpc() DBMS #hBar() #aws #hSpc() AWS #hBar() #docker #hSpc() Docker #hBar() #linux #hSpc() Linux #hBar() #nix #hSpc() Nix #hBar() #github #hSpc() GitHub
 ]
