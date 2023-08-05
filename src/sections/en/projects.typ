@@ -5,8 +5,8 @@
 #cvEntry(
   title: [Meduza],
   host: [#link("https://github.com/tensorush/meduza")[#gh #hSpc() tensorush/meduza]],
-  date: [Jul 29, 2023, 11:42 AM GMT],
-  mode: [Completed],
+  date: [Aug 05, 2023, 02:29 PM GMT],
+  mode: [Maintained],
   logo: "./assets/logos/mdz.png",
   desc: [#emoji.lizard #emoji.merperson Zig codebase graph generator that emits a Mermaid class diagram.],
 )
@@ -23,8 +23,8 @@
 #cvEntry(
   title: [Zigzag],
   host: [#link("https://github.com/tensorush/zigzag")[#gh #hSpc() tensorush/zigzag]],
-  date: [Jul 25, 2023, 11:32 AM GMT],
-  mode: [Completed],
+  date: [Aug 05, 2023, 04:11 PM GMT],
+  mode: [Maintained],
   logo: "./assets/logos/zgz.png",
   desc: [#emoji.lizard #emoji.trident Multi-threaded CPU path tracer.],
 )
