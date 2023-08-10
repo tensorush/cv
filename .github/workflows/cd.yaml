@@ -30,15 +30,14 @@ jobs:
 
       - name: Set up Typst
         uses: yusancky/setup-typst@v2
-        id: setup-typst
         with:
           version: latest
 
       - name: Set up Just
         uses: extractions/setup-just@v1
 
-      - name: Build CV
-        run: just cv
+      - name: Build CVs
+        run: just cvs
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v3

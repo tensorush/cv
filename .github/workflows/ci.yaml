@@ -1,0 +1,25 @@
+name: Continuos Integration
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Set up Just
+        uses: extractions/setup-just@v1
+
+      - name: Check last commit dates updates
+        run: just chk-lcds-upds
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v4
