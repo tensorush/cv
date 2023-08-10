@@ -1,9 +1,11 @@
-cvs:
-    just cv en
-    just cv ru
+export TYPST_FONT_PATHS := "./src/assets/fonts/"
 
-cv LANG:
-    typst --font-path ./src/assets/fonts/ c ./src/{{LANG}}.typ ./out/{{LANG}}.pdf
+bld-cvs:
+    just bld-cv en
+    just bld-cv ru
+
+bld-cv LANG:
+    typst c ./src/{{LANG}}.typ ./out/{{LANG}}.pdf
 
 chk-lcds-upds:
     just chk-lcds-upd tensorush/bookkeeper main
