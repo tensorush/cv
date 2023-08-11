@@ -20,6 +20,9 @@ jobs:
       - name: Set up Just
         uses: extractions/setup-just@v1
 
+      - name: Install jq
+        run: sudo apt install jq
+
       - name: Check last commit dates updates
         run: just chk-lcds-upds
 

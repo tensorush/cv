@@ -15,7 +15,7 @@ chk-lcds-upds:
 
 chk-lcds-upd REPO BRANCH:
     `if [[ $(curl -s https://api.github.com/repos/{{REPO}}/commits/{{BRANCH}} | \
-             jq -r "((now - (.commit.author.date | fromdateiso8601) ) / (60 * 60 * 24) | trunc)") == 0 \
+             jq -r '((now - (.commit.author.date | fromdateiso8601) ) / (60 * 60 * 24) | trunc)') == 0 \
     ]]; then \
         just upd-lcds {{REPO}} {{BRANCH}}; \
     fi`
