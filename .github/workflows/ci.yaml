@@ -10,7 +10,7 @@ permissions:
   contents: write
 
 jobs:
-  check:
+  cron:
     runs-on: ubuntu-latest
 
     steps:
@@ -20,13 +20,8 @@ jobs:
       - name: Set up Just
         uses: extractions/setup-just@v1
 
-      - name: Install jq
-        run: sudo apt install jq
-
       - name: Check last commit dates updates
-        run: |
-          python3 -V
-          just chk-lcds-upds
+        run: just chk-lcds-upds
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
