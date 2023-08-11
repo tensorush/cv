@@ -1,5 +1,7 @@
 export TYPST_FONT_PATHS := "./src/assets/fonts/"
 
+set shell := ["bash", "-uc"]
+
 bld-cvs:
     just bld-cv en
     just bld-cv ru
