@@ -6,7 +6,7 @@
   title: [Spin],
   host: [#link("https://github.com/tensorush/zig-spin")[#gh #hSpc() tensorush/zig-spin]],
   date: [Aug 22, 2023, 11:52 AM GMT],
-  mode: [Developed],
+  mode: [In development],
   logo: "assets/logos/spn.png",
   desc: [#emoji.lizard #emoji.yoyo Zig SDK for Spin, a serverless application framework, created by the Fermyon team.],
 )
@@ -15,7 +15,7 @@
   title: [Meduza],
   host: [#link("https://github.com/tensorush/meduza")[#gh #hSpc() tensorush/meduza]],
   date: [Aug 22, 2023, 06:18 AM GMT],
-  mode: [Maintained],
+  mode: [On maintenance],
   logo: "assets/logos/mdz.png",
   desc: [#emoji.lizard #emoji.merperson Zig codebase graph generator that emits a Mermaid class diagram.],
 )
@@ -33,7 +33,7 @@
   title: [Zigzag],
   host: [#link("https://github.com/tensorush/zigzag")[#gh #hSpc() tensorush/zigzag]],
   date: [Aug 18, 2023, 02:18 PM GMT],
-  mode: [Maintained],
+  mode: [On maintenance],
   logo: "assets/logos/zgz.png",
   desc: [#emoji.lizard #emoji.trident Multi-threaded CPU path tracer.],
 )
