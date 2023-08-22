@@ -15,10 +15,13 @@ Personal Information
 )
 
 #let personalInfo = (
+  email: "tensorush",
   github: "tensorush",
-  telegram: "tensorush",
   linkedin: "tensorush",
-  email: "tensorush@gmail.com",
+  mastodon: "tensorush",
+  telegram: "tensorush",
+  xtwitter: "tensorush",
+  discourse: "tensorush",
 )
 
 #let headerSummary = (
@@ -43,51 +46,55 @@ Colors
   charcoal: rgb("#36454F"),
   cornsilk: rgb("#FFF8DC"),
   platinum: rgb("#E5E4E2"),
+  sky_blue: rgb("#87CEEB"),
   dark_gray: rgb("#A9A9A9"),
   jet_black: rgb("#343434"),
   light_gray: rgb("#D3D3D3"),
   royal_blue: rgb("#4169E1"),
   matte_black: rgb("#28282B"),
+  midnight_blue: rgb("#191970"),
   cadmium_orange: rgb("#F28C28"),
   shamrock_green: rgb("#009E60"),
 )
 
 /*
-Font Awesome Icons
+Header Info Icons
 */
 
-#let lk = fa-link()
+#let ln = fa-link()
 #let gh = fa-github()
-#let tg = fa-telegram()
 #let li = fa-linkedin()
-#let em = fa-envelope()
+#let mt = fa-mastodon()
+#let tg = fa-telegram()
+#let dc = fa-discourse()
+#let em = fa-square-envelope()
+#let xt = fa-icon("square-x-twitter", fa-set: "Brands")
 
+/*
+Tech Skill Icons
+*/
+
+#let aw = fa-aws()
+#let zg = fa-bolt()
+#let lx = fa-linux()
+#let dk = fa-docker()
 #let go = fa-golang()
-#let rust = fa-gear()
-#let zig = fa-bolt()
-#let dbms = fa-database()
-#let aws = fa-aws()
-#let docker = fa-docker()
-#let linux = fa-linux()
-#let nix = fa-snowflake()
-#let github = fa-github-alt()
+#let gt = fa-git-alt()
+#let db = fa-database()
+#let nx = fa-snowflake()
+#let ga = fa-github-alt()
+#let rs = fa-rust(fa-set: "Brands")
 
 /*
 Layout Settings
 */
 
 #let headerFont = "Roboto"
-
 #let titleColor = colors.linen
-
 #let dateColor = colors.dark_gray
-
 #let descColor = colors.light_gray
-
 #let pageColor = colors.matte_black
-
 #let accentColor = colors.shamrock_green
-
 #let profilePhoto = "./assets/photo.png"
 
 /*
@@ -262,47 +269,36 @@ Styles
   )
 }
 
-#let footerStyle(str) = {
-  text(
-    size: 8pt,
-    fill: rgb("#999999"),
-    smallcaps(str),
-  )
-}
-
 /*
 Functions
 */
 
 #let makeHeaderInfo() = {
-  let personalInfoIcons = (
-    email: em,
-    github: gh,
-    telegram: tg,
-    linkedin: li,
-    homepage: lk,
-    extraInfo: "",
-  )
   let n = 1
   for (k, v) in personalInfo {
     if v != "" {
-      if n != 1 {
+      if n > 1 {
         hBar()
       }
-      personalInfoIcons.at(k) + h(5pt)
       if k == "email" {
-        link("mailto:" + v)[#v]
-      } else if k == "telegram" {
-        link("https://t.me/" + v)[#v]
-      } else if k == "linkedin" {
-        link("https://www.linkedin.com/in/" + v)[#v]
+        link("mailto:" + v + "@gmail.com")[#em #hSpc() Email]
       } else if k == "github" {
-        link("https://github.com/" + v)[#v]
+        link("https://github.com/" + v)[#gh #hSpc() GitHub]
+      } else if k == "linkedin" {
+        link("https://www.linkedin.com/in/" + v)[#li #hSpc() LinkedIn]
+      } else if k == "mastodon" {
+        link("https://fosstodon.org/@" + v)[#mt #hSpc() Fosstodon]
+      } else if k == "telegram" {
+        link("https://t.me/" + v)[#tg #hSpc() Telegram]
+      } else if k == "xtwitter" {
+        link("https://twitter.com/" + v)[#xt #hSpc() X]
+      } else if k == "discourse" {
+        link("https://ziggit.dev/u/" + v)[#dc #hSpc() Ziggit]
       } else {
         v
       }
     }
-    n = n + 1
+    n += 1
   }
 }
 
@@ -388,5 +384,7 @@ Functions
 }
 
 #let techSkills = [
-#go #hSpc() Go #hBar() #rust #hSpc() Rust #hBar() #zig #hSpc() Zig #hBar() #dbms #hSpc() DBMS #hBar() #aws #hSpc() AWS #hBar() #docker #hSpc() Docker #hBar() #linux #hSpc() Linux #hBar() #nix #hSpc() Nix #hBar() #github #hSpc() GitHub
+#go #hSpc() Go #hBar() #rs #hSpc() Rust #hBar() #zg #hSpc() Zig #hBar()
+#db #hSpc() DBMS #hBar() #aw #hSpc() AWS #hBar() #dk #hSpc() Docker #hBar()
+#lx #hSpc() Linux #hBar() #nx #hSpc() Nix #hBar() #ga #hSpc() GitHub #hBar() #gt #hSpc() Git
 ]
