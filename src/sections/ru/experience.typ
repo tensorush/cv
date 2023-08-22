@@ -7,7 +7,7 @@
   host: [#link("https://github.com/Stabl-Energy")[#gh #hSpc() STABL Energy] #hDot() Частичная занятость],
   date: [Январь — Март 2023 (3 месяца)],
   mode: [Мюнхен, Германия #hDot() Комбинированный режим],
-  logo: "./assets/logos/stb.png",
+  logo: "assets/logos/stb.png",
   desc: list(
     marker: [➤],
     [Написал Rust-клиент для отправки логов в Grafana Loki.],
@@ -24,7 +24,7 @@
   host: [#link("https://github.com/phygitalism")[#gh #hSpc() Phygitalism] #hDot() Полная занятость],
   date: [Октябрь 2021 — Апрель 2022 (7 месяцев)],
   mode: [Москва, Россия #hDot() Комбинированный режим],
-  logo: "./assets/logos/phy.png",
+  logo: "assets/logos/phy.png",
   desc: list(
     marker: [➤],
     [Реализовал алгоритм обнаружения границ облака точек из научной публикации на Python.],

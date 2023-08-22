@@ -1,4 +1,4 @@
-export TYPST_FONT_PATHS := "./src/assets/fonts/"
+export TYPST_FONT_PATHS := "src/assets/fonts/"
 
 set shell := ["bash", "-uc"]
 
@@ -7,13 +7,13 @@ bld-cvs:
     just bld-cv ru
 
 bld-cv LANG:
-    typst c ./src/{{LANG}}.typ ./out/{{LANG}}.pdf
+    typst c src/{{LANG}}.typ out/{{LANG}}.pdf
 
 chk-lcds-upds:
     just chk-lcds-upd tensorush/bookkeeper main
+    just chk-lcds-upd tensorush/zig-spin main
     just chk-lcds-upd tensorush/meduza main
     just chk-lcds-upd tensorush/zigzag main
-    just chk-lcds-upd tensorush/vault main
 
 chk-lcds-upd REPO BRANCH:
     `if [[ $(curl -s https://api.github.com/repos/{{REPO}}/commits/{{BRANCH}} | \

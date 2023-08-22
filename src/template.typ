@@ -95,7 +95,7 @@ Layout Settings
 #let descColor = colors.light_gray
 #let pageColor = colors.matte_black
 #let accentColor = colors.shamrock_green
-#let profilePhoto = "./assets/photo.png"
+#let profilePhoto = "assets/photo.png"
 
 /*
 Layout

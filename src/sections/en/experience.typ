@@ -7,7 +7,7 @@
   host: [#link("https://github.com/Stabl-Energy")[#gh #hSpc() STABL Energy] #hDot() Part-time],
   date: [January — March 2023 (3 months)],
   mode: [Munich, Germany #hDot() Hybrid],
-  logo: "./assets/logos/stb.png",
+  logo: "assets/logos/stb.png",
   desc: list(
     marker: [➤],
     [Set up automatic generation of custom Grafana dashboards.],
@@ -24,7 +24,7 @@
   host: [#link("https://github.com/phygitalism")[#gh #hSpc() Phygitalism] #hDot() Full-time],
   date: [October 2021 — April 2022 (7 months)],
   mode: [Moscow, Russia #hDot() Hybrid],
-  logo: "./assets/logos/phy.png",
+  logo: "assets/logos/phy.png",
   desc: list(
     marker: [➤],
     [Adapted and deployed RIFE and AdaAttN models as web services using Docker and RabbitMQ.],
