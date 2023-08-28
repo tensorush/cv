@@ -9,6 +9,8 @@ on:
     branches: [main]
     paths: ["**.typ"]
 
+  workflow_call:
+
   workflow_dispatch:
 
 permissions:
