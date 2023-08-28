@@ -14,14 +14,17 @@ Personal Information
   "ru": "Труш",
 )
 
+#let handle = "tensorush"
+
 #let personalInfo = (
-  email: "tensorush",
-  github: "tensorush",
-  linkedin: "tensorush",
-  mastodon: "tensorush",
-  telegram: "tensorush",
-  xtwitter: "tensorush",
-  discourse: "tensorush",
+  site: handle,
+  email: handle,
+  github: handle,
+  linkedin: handle,
+  mastodon: handle,
+  telegram: handle,
+  xtwitter: handle,
+  discourse: handle,
 )
 
 #let headerSummary = (
@@ -62,6 +65,7 @@ Header Info Icons
 */
 
 #let ln = fa-link()
+#let ws = fa-globe()
 #let gh = fa-github()
 #let li = fa-linkedin()
 #let mt = fa-mastodon()
@@ -280,20 +284,22 @@ Functions
       if n > 1 {
         hBar()
       }
-      if k == "email" {
-        link("mailto:" + v + "@gmail.com")[#em #hSpc() Email]
+      if k == "site" {
+        link("https://" + v + ".github.io/")[#ws Site]
+      } else if k == "email" {
+        link("mailto:" + v + "@gmail.com")[#em Email]
       } else if k == "github" {
-        link("https://github.com/" + v)[#gh #hSpc() GitHub]
+        link("https://github.com/" + v)[#gh GitHub]
       } else if k == "linkedin" {
-        link("https://www.linkedin.com/in/" + v)[#li #hSpc() LinkedIn]
+        link("https://www.linkedin.com/in/" + v)[#li LinkedIn]
       } else if k == "mastodon" {
-        link("https://fosstodon.org/@" + v)[#mt #hSpc() Fosstodon]
+        link("https://fosstodon.org/@" + v)[#mt Mastodon]
       } else if k == "telegram" {
-        link("https://t.me/" + v)[#tg #hSpc() Telegram]
+        link("https://t.me/" + v)[#tg Telegram]
       } else if k == "xtwitter" {
-        link("https://twitter.com/" + v)[#xt #hSpc() X]
+        link("https://twitter.com/" + v)[#xt X]
       } else if k == "discourse" {
-        link("https://ziggit.dev/u/" + v)[#dc #hSpc() Ziggit]
+        link("https://ziggit.dev/u/" + v)[#dc Ziggit]
       } else {
         v
       }
