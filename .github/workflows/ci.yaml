@@ -36,3 +36,12 @@ jobs:
     needs: cron
     uses: ./.github/workflows/cd.yaml
     if: needs.cron.outputs.call_cd == 'true'
+
+    permissions:
+      pages: write
+      contents: read
+      id-token: write
+
+    concurrency:
+      group: "pages"
+      cancel-in-progress: false
