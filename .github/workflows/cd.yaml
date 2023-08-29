@@ -32,6 +32,8 @@ jobs:
 
       - name: Set up Typst
         uses: yusancky/setup-typst@v2
+        with:
+          version: latest
 
       - name: Set up Just
         uses: extractions/setup-just@v1
