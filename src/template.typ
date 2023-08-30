@@ -1,9 +1,6 @@
 #import "@preview/fontawesome:0.1.0": *
 
-/*
-Personal Information
-*/
-
+// Personal Information
 #let firstName = ("en": "Georgii (Jora)", "ru": "Георгий (Жора)")
 
 #let lastName = ("en": "Troosh", "ru": "Труш")
@@ -26,10 +23,7 @@ Personal Information
   "ru": "Готов к работе на Go/Rust/Zig, особенно над инструментами для разработчиков.",
 )
 
-/*
-Colors
-*/
-
+// Colors
 #let colors = (
   teal: rgb("#008080"),
   iris: rgb("#5D3FD3"),
@@ -54,10 +48,7 @@ Colors
   shamrock_green: rgb("#009E60"),
 )
 
-/*
-Header Info Icons
-*/
-
+// Header Info Icons
 #let ln = fa-link()
 #let ws = fa-globe()
 #let gh = fa-github()
@@ -68,10 +59,7 @@ Header Info Icons
 #let em = fa-square-envelope()
 #let xt = fa-icon("square-x-twitter", fa-set: "Brands")
 
-/*
-Tech Skill Icons
-*/
-
+// Tech Skill Icons
 #let aw = fa-aws()
 #let zg = fa-bolt()
 #let lx = fa-linux()
@@ -83,10 +71,7 @@ Tech Skill Icons
 #let ga = fa-github-alt()
 #let rs = fa-rust(fa-set: "Brands")
 
-/*
-Layout Settings
-*/
-
+// Layout Settings
 #let headerFont = "Roboto"
 #let titleColor = colors.linen
 #let dateColor = colors.dark_gray
@@ -95,10 +80,7 @@ Layout Settings
 #let accentColor = colors.shamrock_green
 #let profilePhoto = "assets/photo.png"
 
-/*
-Layout
-*/
-
+// Layout
 #let afterHeaderSkip = -9pt
 #let beforeEntrySkip = 1pt
 #let beforeSectionSkip = 1pt
@@ -111,10 +93,7 @@ Layout
   doc
 }
 
-/*
-Utility Functions
-*/
-
+// Utility Functions
 #let hSpc() = [
   #h(2pt)
 ]
@@ -131,10 +110,7 @@ Utility Functions
   include { "sections/" + lang + "/" + file + ".typ" }
 }
 
-/*
-Styles
-*/
-
+// Styles
 #let headerFirstNameStyle(str) = {
   text(font: headerFont, size: 32pt, fill: titleColor, weight: "light", str)
 }
@@ -186,10 +162,7 @@ Styles
   text(fill: descColor, str)
 }
 
-/*
-Functions
-*/
-
+// Functions
 #let makeHeaderInfo() = {
   let n = 1
   for (k, v) in personalInfo {
