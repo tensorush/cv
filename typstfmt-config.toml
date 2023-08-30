@@ -1,2 +1,3 @@
+indent_space = 2
 max_line_length = 110
-ident_space = 2
+experimental_args_breaking_consecutive = false

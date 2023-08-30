@@ -47,7 +47,7 @@ jobs:
   build:
     needs: check
 
-    if: github.event_name != 'schedule' || needs.cron.outputs.has_changes != 'false'
+    if: github.event_name != 'schedule' || needs.check.outputs.has_changes != 'false'
 
     runs-on: ubuntu-latest
 
