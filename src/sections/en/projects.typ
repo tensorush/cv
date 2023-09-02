@@ -23,7 +23,7 @@
 #cvEntry(
   title: [Bookkeeper],
   host: [#link("https://github.com/tensorush/bookkeeper")[#gh #hSpc() tensorush/bookkeeper]],
-  date: [Jul 29, 2023, 03:34 PM GMT],
+  date: [Sep 01, 2023, 10:39 AM GMT],
   mode: [Completed],
   logo: "assets/logos/bkr.png",
   desc: [#emoji.hamster #emoji.books Backend for a bookkeeping service based on gRPC.],
