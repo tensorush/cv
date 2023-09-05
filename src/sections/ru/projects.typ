@@ -17,7 +17,8 @@
   date: [Sep 02, 2023, 11:42 AM GMT],
   mode: [Поддерживается],
   logo: "assets/logos/mdz.png",
-  desc: [#emoji.lizard #emoji.merperson Генератор графа Zig-репозитория, создающий классовую диаграмму в формате Mermaid.],
+  desc: [#emoji.lizard #emoji.merperson Генератор графа Zig-репозитория, создающий классовую диаграмму в формате
+    Mermaid.],
 )
 
 #cvEntry(
@@ -35,5 +36,5 @@
   date: [Aug 28, 2023, 10:07 AM GMT],
   mode: [Поддерживается],
   logo: "assets/logos/zgz.png",
-  desc: [#emoji.lizard #emoji.trident Трассировщик путей, исполняющийся в многопоточном режиме на ЦПУ.],
+  desc: [#emoji.lizard #emoji.trident Трассировщик путей, исполняющийся в многопоточном режиме на CPU.],
 )

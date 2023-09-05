@@ -1,9 +1,15 @@
 #import "@preview/fontawesome:0.1.0": *
 
 // Personal Information
-#let firstName = ("en": "Georgii (Jora)", "ru": "Георгий (Жора)")
+#let firstName = (
+    "en": "Georgii (Jora)",
+    "ru": "Георгий (Жора)",
+)
 
-#let lastName = ("en": "Troosh", "ru": "Труш")
+#let lastName = (
+    "en": "Troosh",
+    "ru": "Труш",
+)
 
 #let handle = "tensorush"
 
@@ -19,8 +25,8 @@
 )
 
 #let headerSummary = (
-  "en": "Open to Go/Rust/Zig Software Engineering positions, especially working on developer tools.",
-  "ru": "Готов к работе на Go/Rust/Zig, особенно над инструментами для разработчиков.",
+  "en": "Open to Go/Rust/Zig Developer positions, especially working on distributed systems.",
+  "ru": "Готов к работе на Go/Rust/Zig, особенно к разработке распределенных систем.",
 )
 
 // Colors
