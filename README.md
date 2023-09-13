@@ -5,7 +5,7 @@
 [![RU][ru-shield]][ru-url]
 [![License][license-shield]][license-url]
 
-### My current Typst CV template available in multiple languages.
+### My Typst CV template available in multiple languages.
 
 <!-- MARKDOWN LINKS -->
 
