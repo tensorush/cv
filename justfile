@@ -23,12 +23,14 @@ chk-lcds-upd REPO BRANCH:
     fi`
 
 upd-lcds REPO BRANCH:
-    just upd-lcd {{REPO}} {{BRANCH}} en
-    just upd-lcd {{REPO}} {{BRANCH}} ru
+    just upd-lcd {{REPO}} {{BRANCH}} en US
+    just upd-lcd {{REPO}} {{BRANCH}} ru RU
 
-upd-lcd REPO BRANCH LANG:
+upd-lcd REPO BRANCH LANG STATE:
     curl -s https://api.github.com/repos/{{REPO}}/branches/{{BRANCH}} | \
-    jq -r '.commit.commit.author.date | strptime("%Y-%m-%dT%H:%M:%SZ") | strftime("%b %d, %Y, %I:%M %p")' | \
-    python3 -c "d=input(); p='src/sections/{{LANG}}/projects.typ'; \
-        f=open(p,'r'); s=f.read(); i=s.rindex('{{REPO}}')+len('{{REPO}}')+13; s=s.replace(s[i:i+22],d); f.close(); \
-        f=open(p,'w'); f.write(s); f.close()"
+    python3 -c "import sys,json,locale,datetime; d=json.load(sys.stdin)['commit']['commit']['author']['date']; \
+                p='src/sections/{{LANG}}/projects.typ'; f=open(p,'r'); s=f.read(); f.close(); \
+                i=s.rindex('{{REPO}}')+len('{{REPO}}')+13; j=s.index(']',i); f=open(p,'w'); \
+                locale.setlocale(locale.LC_TIME,'{{LANG}}_{{STATE}}.UTF-8'); \
+                t='%B %-d, %Y' if '{{LANG}}' == 'en' else '%-d %B, %Y'; \
+                s=s.replace(s[i:j],datetime.datetime.fromisoformat(d).strftime(t)); f.write(s); f.close()"
