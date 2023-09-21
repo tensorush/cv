@@ -38,13 +38,13 @@ jobs:
       - name: Set up Just
         uses: extractions/setup-just@v1
 
-      - name: Check locale
+      - name: Install locale
         run: |
-          locale
-          locale -a
+          sudo apt-get install language-pack-ru-base
+          sudo dpkg-reconfigure locales
 
       - name: Check last commit dates updates
-        run: LC_ALL=C just chk-lcds-upds
+        run: just chk-lcds-upds
 
       - name: Commit changes
         id: commit
