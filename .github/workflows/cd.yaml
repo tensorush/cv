@@ -66,6 +66,11 @@ jobs:
       - name: Set up Just
         uses: extractions/setup-just@v1
 
+      - name: Check locale
+        run: |
+          locale
+          locale -a
+
       - name: Build CVs
         run: just bld-cvs
 
