@@ -38,8 +38,13 @@ jobs:
       - name: Set up Just
         uses: extractions/setup-just@v1
 
+      - name: Check locale
+        run: |
+          locale
+          locale -a
+
       - name: Check last commit dates updates
-        run: just chk-lcds-upds
+        run: LC_ALL=C just chk-lcds-upds
 
       - name: Commit changes
         id: commit
@@ -65,11 +70,6 @@ jobs:
 
       - name: Set up Just
         uses: extractions/setup-just@v1
-
-      - name: Check locale
-        run: |
-          locale
-          locale -a
 
       - name: Build CVs
         run: just bld-cvs
