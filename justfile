@@ -33,4 +33,4 @@ upd-lcd REPO BRANCH LANG STATE:
                 i=s.rindex('{{REPO}}')+len('{{REPO}}')+13; j=s.index(']',i); f=open(p,'w'); \
                 locale.setlocale(locale.LC_TIME,'{{LANG}}_{{STATE}}.UTF-8'); \
                 t='%B %-d, %Y' if '{{LANG}}' == 'en' else '%-d %B, %Y'; \
-                s=s.replace(s[i:j],datetime.datetime.fromisoformat(d).strftime(t)); f.write(s); f.close()"
+                s=s.replace(s[i:j],datetime.datetime.strptime(d,'%Y-%m-%dT%H:%M:%S%z').strftime(t)); f.write(s); f.close()"
