@@ -5,7 +5,7 @@
 #cvEntry(
   title: [Spin],
   host: [#link("https://github.com/tensorush/zig-spin")[#gh #hSpc() tensorush/zig-spin]],
-  date: [August 31, 2023],
+  date: [September 20, 2023],
   mode: [In development],
   logo: "assets/logos/spn.png",
   desc: [#emoji.lizard #emoji.yoyo Zig SDK for Spin, a serverless application framework, created by the Fermyon team.],
@@ -14,7 +14,7 @@
 #cvEntry(
   title: [Meduza],
   host: [#link("https://github.com/tensorush/meduza")[#gh #hSpc() tensorush/meduza]],
-  date: [September 2, 2023],
+  date: [September 20, 2023],
   mode: [On maintenance],
   logo: "assets/logos/mdz.png",
   desc: [#emoji.lizard #emoji.merperson Zig codebase graph generator that emits a Mermaid class diagram.],

@@ -5,7 +5,7 @@
 #cvEntry(
   title: [Spin],
   host: [#link("https://github.com/tensorush/zig-spin")[#gh #hSpc() tensorush/zig-spin]],
-  date: [31 августа, 2023],
+  date: [20 сентября, 2023],
   mode: [Разрабатывается],
   logo: "assets/logos/spn.png",
   desc: [#emoji.lizard #emoji.yoyo Zig SDK для Spin, фреймворка бессерверных приложений, созданного командой Fermyon.],
@@ -14,7 +14,7 @@
 #cvEntry(
   title: [Meduza],
   host: [#link("https://github.com/tensorush/meduza")[#gh #hSpc() tensorush/meduza]],
-  date: [2 сентября, 2023],
+  date: [20 сентября, 2023],
   mode: [Поддерживается],
   logo: "assets/logos/mdz.png",
   desc: [#emoji.lizard #emoji.merperson Генератор графа Zig-репозитория, создающий классовую диаграмму в формате
