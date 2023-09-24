@@ -17,9 +17,9 @@
   site: handle,
   email: handle,
   github: handle,
+  telegram: handle,
   linkedin: handle,
   mastodon: handle,
-  telegram: handle,
   xtwitter: handle,
   discourse: handle,
 )
@@ -58,9 +58,9 @@
 #let ln = fa-link()
 #let ws = fa-globe()
 #let gh = fa-github()
+#let tg = fa-telegram()
 #let li = fa-linkedin()
 #let mt = fa-mastodon()
-#let tg = fa-telegram()
 #let dc = fa-discourse()
 #let em = fa-square-envelope()
 #let xt = fa-icon("square-x-twitter", fa-set: "Brands")
@@ -182,12 +182,12 @@
         link("mailto:" + v + "@gmail.com")[#em Email]
       } else if k == "github" {
         link("https://github.com/" + v)[#gh GitHub]
+      } else if k == "telegram" {
+        link("https://t.me/" + v)[#tg Telegram]
       } else if k == "linkedin" {
         link("https://www.linkedin.com/in/" + v)[#li LinkedIn]
       } else if k == "mastodon" {
         link("https://fosstodon.org/@" + v)[#mt Mastodon]
-      } else if k == "telegram" {
-        link("https://t.me/" + v)[#tg Telegram]
       } else if k == "xtwitter" {
         link("https://twitter.com/" + v)[#xt X]
       } else if k == "discourse" {
