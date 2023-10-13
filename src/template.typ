@@ -177,7 +177,7 @@
         hBar()
       }
       if k == "site" {
-        link("https://" + v + ".github.io/")[#ws Site]
+        link("https://" + v + ".github.io/about/")[#ws Site]
       } else if k == "email" {
         link("mailto:" + v + "@gmail.com")[#em Email]
       } else if k == "github" {
