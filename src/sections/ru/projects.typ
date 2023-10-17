@@ -5,7 +5,7 @@
 #cvEntry(
   title: [Spin],
   host: [#link("https://github.com/tensorush/zig-spin")[#gh #hSpc() tensorush/zig-spin]],
-  date: [16 октября, 2023],
+  date: [23 сентября, 2023],
   mode: [Разрабатывается],
   logo: "assets/logos/spn.png",
   desc: [#emoji.lizard #emoji.yoyo Zig SDK для Spin, фреймворка бессерверных приложений, созданного командой Fermyon.],
@@ -33,7 +33,7 @@
 #cvEntry(
   title: [Zigzag],
   host: [#link("https://github.com/tensorush/zigzag")[#gh #hSpc() tensorush/zigzag]],
-  date: [16 октября, 2023],
+  date: [21 сентября, 2023],
   mode: [Поддерживается],
   logo: "assets/logos/zgz.png",
   desc: [#emoji.lizard #emoji.trident Трассировщик путей, исполняющийся в многопоточном режиме на CPU.],
