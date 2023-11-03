@@ -21,7 +21,7 @@
 )
 
 #cvEntry(
-  title: [B.Sc. Economics and Management],
+  title: [B.Sc. Business and Economics],
   host: [#link("https://shorturl.at/fQRX4")[#ln #hSpc() Higher School of Economics] #hDot() Full-time],
   date: [September 2016 — August 2020 (4 years)],
   mode: [Saint Petersburg, Russia #hDot() On-site],
