@@ -14,10 +14,10 @@
 #let handle = "tensorush"
 
 #let personalInfo = (
-  site: handle,
   email: handle,
-  github: handle,
   telegram: handle,
+  github: handle,
+  site: handle,
   linkedin: handle,
   mastodon: handle,
   xtwitter: handle,
@@ -176,14 +176,14 @@
       if n > 1 {
         hBar()
       }
-      if k == "site" {
-        link("https://" + v + ".github.io")[#ws Site]
-      } else if k == "email" {
+      if k == "email" {
         link("mailto:" + v + "@gmail.com")[#em Email]
-      } else if k == "github" {
-        link("https://github.com/" + v)[#gh GitHub]
       } else if k == "telegram" {
         link("https://t.me/" + v)[#tg Telegram]
+      } else if k == "github" {
+        link("https://github.com/" + v)[#gh GitHub]
+      } else if k == "site" {
+        link("https://" + v + ".github.io")[#ws Site]
       } else if k == "linkedin" {
         link("https://www.linkedin.com/in/" + v)[#li LinkedIn]
       } else if k == "mastodon" {
