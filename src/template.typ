@@ -17,7 +17,7 @@
   email: handle,
   telegram: handle,
   github: handle,
-  site: handle,
+  blog: handle,
   linkedin: handle,
   mastodon: handle,
   xtwitter: handle,
@@ -56,13 +56,13 @@
 
 // Header Info Icons
 #let ln = fa-link()
-#let ws = fa-globe()
+#let bg = fa-blog()
 #let gh = fa-github()
 #let tg = fa-telegram()
-#let li = fa-linkedin()
-#let mt = fa-mastodon()
+#let ld = fa-linkedin()
+#let md = fa-mastodon()
 #let dc = fa-discourse()
-#let em = fa-square-envelope()
+#let ml = fa-square-envelope()
 #let xt = fa-icon("square-x-twitter", fa-set: "Brands")
 
 // Tech Skill Icons
@@ -177,17 +177,17 @@
         hBar()
       }
       if k == "email" {
-        link("mailto:" + v + "@gmail.com")[#em Email]
+        link("mailto:" + v + "@gmail.com")[#ml Email]
       } else if k == "telegram" {
         link("https://t.me/" + v)[#tg Telegram]
       } else if k == "github" {
         link("https://github.com/" + v)[#gh GitHub]
-      } else if k == "site" {
-        link("https://" + v + ".github.io")[#ws Site]
+      } else if k == "blog" {
+        link("https://" + v + ".github.io")[#bg Blog]
       } else if k == "linkedin" {
-        link("https://www.linkedin.com/in/" + v)[#li LinkedIn]
+        link("https://www.linkedin.com/in/" + v)[#ld LinkedIn]
       } else if k == "mastodon" {
-        link("https://fosstodon.org/@" + v)[#mt Mastodon]
+        link("https://fosstodon.org/@" + v)[#md Mastodon]
       } else if k == "xtwitter" {
         link("https://twitter.com/" + v)[#xt X]
       } else if k == "discourse" {
