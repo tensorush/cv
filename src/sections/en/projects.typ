@@ -5,7 +5,7 @@
 #cvEntry(
   title: [Spin],
   host: [#link("https://github.com/tensorush/zig-spin")[#gh #hSpc() tensorush/zig-spin]],
-  date: [November 27, 2023],
+  date: [November 28, 2023],
   mode: [In development],
   logo: "assets/logos/spn.png",
   desc: [#emoji.lizard #emoji.yoyo Zig SDK for Spin, a serverless application framework, created by the Fermyon team.],
