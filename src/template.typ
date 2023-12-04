@@ -26,7 +26,7 @@
 
 #let headerSummary = (
   "en": "Open to C++/Go/Rust/Zig developer positions, especially working on distributed systems.",
-  "ru": "Готов к работе на C++/Go/Rust/Zig, особенно в контексте распределенных систем.",
+  "ru": "Готов к разработке на C++/Go/Rust/Zig, особенно в рамках распределенных систем.",
 )
 
 // Colors
