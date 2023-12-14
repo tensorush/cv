@@ -25,7 +25,7 @@
 )
 
 #let headerSummary = (
-  "en": "Open to Go/Zig developer positions, especially working on distributed systems.",
+  "en": "Open to Go/C++ developer positions, especially working on distributed systems.",
   "ru": "Готов к разработке на Go/C++, особенно в контексте распределенных систем.",
 )
 
@@ -75,7 +75,7 @@
 #let db = fa-database()
 #let nx = fa-snowflake()
 #let ga = fa-github-alt()
-#let rs = fa-rust(fa-set: "Brands")
+#let cp = fa-circle-plus()
 
 // Layout Settings
 #let headerFont = "Roboto"
@@ -282,7 +282,7 @@
 }
 
 #let techSkills = [
-  #go #hSpc() Go #hBar() #rs #hSpc() Rust #hBar() #zg #hSpc() Zig #hBar()
+  #go #hSpc() Go #hBar() #cp #hSpc() C++ #hBar() #zg #hSpc() Zig #hBar()
   #db #hSpc() DBMS #hBar() #aw #hSpc() AWS #hBar() #dk #hSpc() Docker #hBar()
   #lx #hSpc() Linux #hBar() #nx #hSpc() Nix #hBar() #ga #hSpc() GitHub #hBar() #gt #hSpc() Git
 ]
