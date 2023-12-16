@@ -25,8 +25,8 @@
 )
 
 #let headerSummary = (
-  "en": "Open to Go/C++ developer positions, especially working on distributed systems.",
-  "ru": "Готов к разработке на Go/C++, особенно в контексте распределенных систем.",
+  "en": "Open to C++/Go developer positions, especially working on distributed systems.",
+  "ru": "Готов к разработке на C++/Go, особенно в контексте распределенных систем.",
 )
 
 // Colors
