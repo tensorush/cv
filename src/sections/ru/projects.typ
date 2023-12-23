@@ -5,7 +5,7 @@
 #cvEntry(
   title: [Spin],
   host: [#link("https://github.com/tensorush/zig-spin")[#gh #hSpc() tensorush/zig-spin]],
-  date: [9 августа, 2023 — 6 декабря, 2023],
+  date: [9 августа, 2023 — 22 декабря, 2023],
   mode: [Разрабатывается],
   logo: "assets/logos/spn.png",
   desc: [#emoji.lizard #emoji.yoyo Zig SDK для Spin, фреймворка бессерверных приложений, созданного командой Fermyon.],
