@@ -3,7 +3,7 @@
 #cvSection("Education")
 
 #cvEntry(
-  title: [M.Sc. Informatics],
+  title: [M.Sc. Informatics (Academic Exchange)],
   host: [#link("https://www.tum.de/en/studies/degree-programs/detail/informatics-master-of-science-msc")[#ln #hSpc() Technical University of Munich] #hDot() Full-time],
   date: [October 2022 — March 2023 (6 months)],
   mode: [Munich, Germany #hDot() On-site],

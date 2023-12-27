@@ -3,7 +3,7 @@
 #cvSection("Образование")
 
 #cvEntry(
-  title: [Магистр факультета Информатики],
+  title: [Магистр факультета Информатики (Академический Обмен)],
   host: [#link("https://www.tum.de/en/studies/degree-programs/detail/informatics-master-of-science-msc")[#ln #hSpc() Технический Университет Мюнхена] #hDot() Очная форма],
   date: [Октябрь 2022 — Март 2023 (6 месяцев)],
   mode: [Мюнхен, Германия #hDot() Физический режим],
