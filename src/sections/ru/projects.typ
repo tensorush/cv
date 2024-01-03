@@ -14,7 +14,7 @@
 #cvEntry(
   title: [Meduza],
   host: [#link("https://github.com/tensorush/meduza")[#gh #hSpc() tensorush/meduza]],
-  date: [21 июля, 2023 — 30 ноября, 2023],
+  date: [21 июля, 2023 — 2 января, 2024],
   mode: [Поддерживается],
   logo: "assets/logos/mdz.png",
   desc: [#emoji.lizard #emoji.merperson Генератор графа Zig-репозитория, создающий классовую диаграмму в формате
